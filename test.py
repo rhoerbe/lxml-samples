@@ -54,3 +54,17 @@ assert t32.getroot().attrib[XMLNS_PVZD_PREFIX+'disposition'] == 'delete'
 assert t32.find('//pvzd:disposition', namespaces={'pvzd': XMLNS_PVZD}).text == 'delete'
 assert e32.xpath('//md:Extensions', namespaces={'md': XMLNS_MD})[0].tag == '{urn:oasis:names:tc:SAML:2.0:metadata}Extensions'
 assert t32.xpath('//pvzd:disposition',namespaces={'pvzd': XMLNS_PVZD})[0].tag == XMLNS_PVZD_PREFIX+'disposition'
+
+
+print('4 Examples with UTF-16 XML document')
+
+print('4.1 UTF-16 using etree.parse()')
+t41 = lxml.etree.parse('ed4_utf16_encoding.xml')
+assert t41.xpath('//OrganizationName')[0].text == 'ÜDÖLLÄ Ltd'
+assert t41.xpath('//OrganizationDisplayName')[0].text == 'Many Umlauts: äöü'
+
+#print('4.2 UTF-16 using etree.fromstring()')
+# The following example is wrong, because the encoding is defined in the file, and should not be assumed by open():
+#with open('ed4_utf16_encoding.xml', encoding='utf-16') as fd:
+#    xml_str = fd.read()
+# use etree.parse() instead
