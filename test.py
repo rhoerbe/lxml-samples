@@ -1,3 +1,4 @@
+import io
 import lxml.etree
 
 print('1. Examples without namespace')
@@ -70,3 +71,12 @@ assert t41.xpath('//OrganizationDisplayName')[0].text == 'Many Umlauts: äöü'
 #with open('ed4_utf16_encoding.xml', encoding='utf-16') as fd:
 #    xml_str = fd.read()
 # use etree.parse() instead
+# to convert to utf-8:
+# lxml.etree.tostring(self.tree, encoding='utf-8', method='text', pretty_print=True)
+
+print('5 C14N')
+o51 = io.BytesIO()
+t51 = lxml.etree.parse('ed1_without_ns.xml')
+t51.write_c14n(o51)
+assert o51.getvalue().decode('utf-8')[0:61] == '<EntityDescriptor entityID="https://idp.example.com/idp.xml">'
+o51.close()
