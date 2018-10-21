@@ -34,6 +34,8 @@ XMLNS_PVZD_PREFIX = '{%s}' % XMLNS_PVZD
 print('2.1 Parse file into ElementTree and find elements')
 t21 = lxml.etree.parse('ed2_with_ns.xml')
 assert t21.getroot().tag == '{urn:oasis:names:tc:SAML:2.0:metadata}EntityDescriptor'
+assert t21.getroot().attrib['entityID'] == 'https://idp.example.com/idp.xml'
+
 assert t21.xpath('/*')[0].tag == '{urn:oasis:names:tc:SAML:2.0:metadata}EntityDescriptor'
 xp = 'md:IDPSSODescriptor//ds:X509Certificate'
 assert t21.xpath(xp, namespaces={'ds': XMLNS_DSIG, 'md': XMLNS_MD})[0].tag == '{http://www.w3.org/2000/09/xmldsig#}X509Certificate'
