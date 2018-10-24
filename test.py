@@ -72,7 +72,7 @@ assert t41.xpath('//OrganizationDisplayName')[0].text == 'Many Umlauts: äöü'
 #    xml_str = fd.read()
 # use etree.parse() instead
 # to convert to utf-8:
-# lxml.etree.tostring(self.tree, encoding='utf-8', method='text', pretty_print=True)
+# lxml.etree.tostring(self.tree, encoding='utf-8', pretty_print=True)
 
 print('5 C14N')
 o51 = io.BytesIO()
@@ -80,3 +80,8 @@ t51 = lxml.etree.parse('ed1_without_ns.xml')
 t51.write_c14n(o51)
 assert o51.getvalue().decode('utf-8')[0:61] == '<EntityDescriptor entityID="https://idp.example.com/idp.xml">'
 o51.close()
+
+print('6 Add element')
+t61 = lxml.etree.parse('ed2_with_ns.xml')
+t61.xpath('//md:EntityDescriptor/md:Extensions', namespaces={'md': XMLNS_MD})
+new = lxml.etree.Element("{urn:oasis:names:tc:SAML:metadata:rpi}RegistrationInfo")
