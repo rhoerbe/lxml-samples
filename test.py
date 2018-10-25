@@ -90,7 +90,8 @@ t51.write_c14n(o51)
 assert o51.getvalue().decode('utf-8')[0:61] == '<EntityDescriptor entityID="https://idp.example.com/idp.xml">'
 o51.close()
 
-print('6 Add element and remove it')
+print('6 Modify Tree')
+print('6.1 Append element and remove it')
 def append_if_missing(
         tree: lxml.etree.ElementTree,
         xpath_insert_parent: str,
@@ -123,4 +124,22 @@ o61.getvalue()
 #if len(insert_to_element) > 0:
 #    insert_to_element[0].append(new)  # append only for 1st
 #assert lxml.etree.tostring(t61, pretty_print=True) == b'<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://idp.example.com/idp.xml">\n    <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">\n         <md:Extensions>\n            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>\n            <alg:SigningMethod MinKeySize="256" MaxKeySize="511" Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>\n            <alg:SigningMethod MinKeySize="2048" MaxKeySize="4096" Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>\n            <!-- blacklisted: http://www.w3.org/2000/09/xmldsig#rsa-sha1 -->\n            <mdui:UIInfo>\n                <mdui:DisplayName xml:lang="en">Test Driver IdP </mdui:DisplayName>\n                <mdui:Description xml:lang="en">Saml2Test Test Driver IdP</mdui:Description>\n            </mdui:UIInfo>\n            <mdui:DiscoHints>\n                <mdui:DomainHint>https://github.com/rohe/fedlab/</mdui:DomainHint>\n                <mdui:IPHint>81.217.70.0/8</mdui:IPHint>\n                <mdui:GeolocationHint>geo:92.3308,17.0516</mdui:GeolocationHint>\n            </mdui:DiscoHints>\n        <ns0:RegistrationInfo xmlns:ns0="urn:oasis:names:tc:SAML:metadata:rpi"/><ns0:RegistrationInfo xmlns:ns0="urn:oasis:names:tc:SAML:metadata:rpi"/></md:Extensions>\n        <md:KeyDescriptor use="signing">\n            <ds:KeyInfo>\n                <ds:X509Data>\n                    <ds:X509Certificate>MIIC8jCCAlugAwIBAgIJAJHg2V5J31I8MA0GCSqGSIb3DQEBBQUAMFoxCzAJBgNVBAYTAlNFMQ0wCwYDVQQHEwRVbWVhMRgwFgYDVQQKEw9VbWVhIFVuaXZlcnNpdHkxEDAOBgNVBAsTB0lUIFVuaXQxEDAOBgNVBAMTB1Rlc3QgU1AwHhcNMDkxMDI2MTMzMTE1WhcNMTAxMDI2MTMzMTE1WjBaMQswCQYDVQQGEwJTRTENMAsGA1UEBxMEVW1lYTEYMBYGA1UEChMPVW1lYSBVbml2ZXJzaXR5MRAwDgYDVQQLEwdJVCBVbml0MRAwDgYDVQQDEwdUZXN0IFNQMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDkJWP7bwOxtH+E15VTaulNzVQ/0cSbM5G7abqeqSNSs0l0veHr6/ROgW96ZeQ57fzVy2MCFiQRw2fzBs0n7leEmDJyVVtBTavYlhAVXDNa3stgvh43qCfLx+clUlOvtnsoMiiRmo7qf0BoPKTj7c0uLKpDpEbAHQT4OF1HRYVxMwIDAQABo4G/MIG8MB0GA1UdDgQWBBQ7RgbMJFDGRBu9o3tDQDuSoBy7JjCBjAYDVR0jBIGEMIGBgBQ7RgbMJFDGRBu9o3tDQDuSoBy7JqFepFwwWjELMAkGA1UEBhMCU0UxDTALBgNVBAcTBFVtZWExGDAWBgNVBAoTD1VtZWEgVW5pdmVyc2l0eTEQMA4GA1UECxMHSVQgVW5pdDEQMA4GA1UEAxMHVGVzdCBTUIIJAJHg2V5J31I8MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAMuRwwXRnsiyWzmRikpwinnhTmbooKm5TINPE7A7gSQ710RxioQePPhZOzkM27NnHTrCe2rBVg0EGz7QTd1JIwLPvgoj4VTi/fSha/tXrYUaqc9AqU1kWI4WN                        +vffBGQ09mo+6CffuFTZYeOhzP/2stAPwCTU4kxEoiy0KpZMANI=\n                    </ds:X509Certificate>\n                </ds:X509Data>\n            </ds:KeyInfo>\n        </md:KeyDescriptor>\n        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.com/slo/post"/>\n        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.com/slo/redirect"/>\n        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.com/mni/post"/>\n        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.com/mni/redirect"/>\n        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>\n        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>\n        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.com/sso/redirect"/>\n        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.com/sso/post"/>\n        <md:AssertionIDRequestService Binding="urn:oasis:names:tc:SAML:2.0:bindings:URI" Location="https://idp.example.com/airs"/>\n    </md:IDPSSODescriptor>\n    <md:Organization>\n        <md:OrganizationName xml:lang="en">Saml2Test Harness</md:OrganizationName>\n        <md:OrganizationDisplayName xml:lang="en">Saml2Test Harness</md:OrganizationDisplayName>\n        <md:OrganizationURL xml:lang="en">https://github.com/rohe/saml2test/</md:OrganizationURL>\n    </md:Organization>\n    <md:ContactPerson contactType="technical">\n        <md:GivenName>Testiani</md:GivenName>\n        <md:SurName>Testosteroni</md:SurName>\n        <md:EmailAddress>testiani@example.com</md:EmailAddress>\n    </md:ContactPerson>\n</md:EntityDescriptor>\n'
+
+print('6.2 Insert element as first subelement')
+def insert_if_missing(
+        tree: lxml.etree.ElementTree,
+        xpath_insert_parent: str,
+        xpath_new_element: str,
+        new_element: lxml.etree.Element,
+        namespaces: dict):
+    if len(tree.xpath(xpath_new_element, namespaces=namespaces)) == 0:
+        parent_element = tree.xpath(xpath_insert_parent, namespaces=namespaces)
+        parent_element[0].insert(0, new_element)  # append only for 1st
+
+t62 = lxml.etree.parse('ed2_with_ns.xml')
+new = lxml.etree.Element(XMLNS_MD_PREFIX+"Extensions")
+insert_if_missing(t62, '/md:EntityDescriptor', '/md:EntityDescriptor/md:Extensions', new, {'md': XMLNS_MD})
+o62=io.BytesIO()
+t62.write(o62)
+o62.getvalue()
 
