@@ -67,7 +67,7 @@ assert t32.getroot().attrib[XMLNS_PVZD_PREFIX+'disposition'] == 'delete'
 assert t32.find('//pvzd:disposition', namespaces={'pvzd': XMLNS_PVZD}).text == 'delete'
 assert e32.xpath('//md:Extensions', namespaces={'md': XMLNS_MD})[0].tag == '{urn:oasis:names:tc:SAML:2.0:metadata}Extensions'
 assert t32.xpath('//pvzd:disposition',namespaces={'pvzd': XMLNS_PVZD})[0].tag == XMLNS_PVZD_PREFIX+'disposition'
-assert len(t32.xpath('//@md:Location', namespaces={'md': XMLNS_MD})) > 0
+assert len(t32.xpath('//md:SingleSignOnService/@Location', namespaces={'md': XMLNS_MD})) > 0
 
 
 print('4 Examples with UTF-16 XML document')
