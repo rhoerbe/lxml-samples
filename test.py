@@ -26,11 +26,13 @@ t11.getroot()
 t11.find('IDPSSODescriptor')
 t11.find('Organization')
 t11.find('OrganizationName')
+t11.xpath('//@Location')
 
 print('1.2 Parse file into Element and find elements')
 f = open('ed1_without_ns.xml', encoding='utf8')
 xml_str=f.read()
 e12 = lxml.etree.fromstring(xml_str.encode('utf-8'))
+c12e12.getchildren()
 assert e12.tag == 'EntityDescriptor'
 assert e12.attrib == {'entityID': 'https://idp.example.com/idp.xml'}
 assert e12.xpath('//X509Certificate')[0].tag == 'X509Certificate'
@@ -67,7 +69,7 @@ assert t32.getroot().attrib[XMLNS_PVZD_PREFIX+'disposition'] == 'delete'
 assert t32.find('//pvzd:disposition', namespaces={'pvzd': XMLNS_PVZD}).text == 'delete'
 assert e32.xpath('//md:Extensions', namespaces={'md': XMLNS_MD})[0].tag == '{urn:oasis:names:tc:SAML:2.0:metadata}Extensions'
 assert t32.xpath('//pvzd:disposition',namespaces={'pvzd': XMLNS_PVZD})[0].tag == XMLNS_PVZD_PREFIX+'disposition'
-assert len(t32.xpath('//md:SingleSignOnService/@Location', namespaces={'md': XMLNS_MD})) > 0
+assert len(t32.xpath('//md:*/@Location', namespaces={'md': XMLNS_MD})) > 0
 
 
 print('4 Examples with UTF-16 XML document')
