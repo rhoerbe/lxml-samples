@@ -1,6 +1,15 @@
 import io
 import lxml.etree
 
+XMLNS_DSIG = 'http://www.w3.org/2000/09/xmldsig#'
+XMLNS_DSIG_PREFIX = '{%s}' % XMLNS_DSIG
+XMLNS_MD = 'urn:oasis:names:tc:SAML:2.0:metadata'
+XMLNS_MD_PREFIX = '{%s}' % XMLNS_MD
+XMLNS_PVZD = 'http://egov.gv.at/pvzd1.xsd'
+XMLNS_PVZD_PREFIX = '{%s}' % XMLNS_PVZD
+XMLNS_MDRPI = 'urn:oasis:names:tc:SAML:2.0:metadata:rpi'
+XMLNS_MDRPI_PREFIX = '{%s}' % XMLNS_MDRPI
+
 # notes on lxml:
 #   - xpath() has different namespace semantics (using QNames) as opposed to find(),
 #     Element.attrib addressing, Element() etc.
@@ -32,14 +41,6 @@ e12.find('OrganizationName')
 
 print('2. Examples with namespace')
 
-XMLNS_DSIG = 'http://www.w3.org/2000/09/xmldsig#'
-XMLNS_DSIG_PREFIX = '{%s}' % XMLNS_DSIG
-XMLNS_MD = 'urn:oasis:names:tc:SAML:2.0:metadata'
-XMLNS_MD_PREFIX = '{%s}' % XMLNS_MD
-XMLNS_PVZD = 'http://egov.gv.at/pvzd1.xsd'
-XMLNS_PVZD_PREFIX = '{%s}' % XMLNS_PVZD
-XMLNS_MDRPI = 'urn:oasis:names:tc:SAML:2.0:metadata:rpi'
-XMLNS_MDRPI_PREFIX = '{%s}' % XMLNS_MDRPI
 
 print('2.1 Parse file into ElementTree and find elements')
 t21 = lxml.etree.parse('ed2_with_ns.xml')
@@ -66,6 +67,7 @@ assert t32.getroot().attrib[XMLNS_PVZD_PREFIX+'disposition'] == 'delete'
 assert t32.find('//pvzd:disposition', namespaces={'pvzd': XMLNS_PVZD}).text == 'delete'
 assert e32.xpath('//md:Extensions', namespaces={'md': XMLNS_MD})[0].tag == '{urn:oasis:names:tc:SAML:2.0:metadata}Extensions'
 assert t32.xpath('//pvzd:disposition',namespaces={'pvzd': XMLNS_PVZD})[0].tag == XMLNS_PVZD_PREFIX+'disposition'
+assert len(t32.xpath('//@md:Location', namespaces={'md': XMLNS_MD})) > 0
 
 
 print('4 Examples with UTF-16 XML document')
