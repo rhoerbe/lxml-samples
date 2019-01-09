@@ -1,0 +1,1838 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntitiesDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:pyff="http://pyff.io/NS" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Name="/etc/pyff/md_aggregator" ID="id" validUntil="2019-01-19T05:03:10Z" cacheDuration="PT4H"><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#id"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#WithComments"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>O7HBLFQGb4WstHLLg+RGUZ7n8Q47rk4JkYYFayVTOVM=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>TZSuIu7iVARbTdM+VI3m7zO2wLycA0fObtpgK2rUogWpG3f6wPxK3asHcFdBJbCPpLaAtYUWw1IJcXGRHWyt4X11O5GhlDe/lyXMOGm4aio2fnXPLIFwg5bw8iPZCpI0cfe4fFmfoUOGDKa87tCTNTBYfI5Q2XsrfcCP7Gk88xc=</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIICIzCCAYwCAXcwDQYJKoZIhvcNAQELBQAwWjELMAkGA1UEBhMCc2UxCzAJBgNV
+BAgTAmFjMQ0wCwYDVQQHEwRVbWVhMQwwCgYDVQQKEwNJVFMxDTALBgNVBAsTBERJ
+UkcxEjAQBgNVBAMTCWxvY2FsaG9zdDAeFw0xNDAzMTkxNzE5MzlaFw0yNDAzMTYx
+NzE5MzlaMFoxCzAJBgNVBAYTAnNlMQswCQYDVQQIEwJhYzENMAsGA1UEBxMEVW1l
+YTEMMAoGA1UEChMDSVRTMQ0wCwYDVQQLEwRESVJHMRIwEAYDVQQDEwlsb2NhbGhv
+c3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALswQbMz6dKL4FEKu+O3GYDf
+aniyxcfizsHaiehuh5jufrlGZw/zMMttteTRhpjtTFN2/R68d1kh8pmO+HV7u+53
+h+C33I178ZsOquSovGe1AWmzDzp2j6CRdQYdZaMCc4YxtwEXs7570YmnPLKhz8aH
+diQRHhtx1cqdPPStkz67AgMBAAEwDQYJKoZIhvcNAQELBQADgYEApQ5znEdhsJBs
++ew81X9pkUKZ/ruu/p2OPfYmKzdFnK6mq9bF5CEIaIkvbSJjpECicmGCNw9ATJXy
+lnwFLnfxw6d+YGi4XPuo64NSG00ycnMSTMJ8OR5ForcF89v72BLRDYo6yXeNDw72
+2ul0lPzH54CNQzsm4N/5w5iStnOT1TQ=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature><md:EntityDescriptor xmlns:ns2="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://samlproxy-test.ucom.gv.at/sp">
+  <md:Extensions>
+     <ns2:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy1.test.portalverbund.gv.at/Saml2/disco" index="1"/>
+     <mdattr:EntityAttributes>
+       <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+       <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+     </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+       <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+       <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+       <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+       <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+       <mdui:UIInfo>
+         <mdui:DisplayName xml:lang="en">UCOM Test (BKA)</mdui:DisplayName>
+         <mdui:Description xml:lang="en"> 
+             UCOM / Rocketchat Testumgebung
+         </mdui:Description>
+         <mdui:Logo xml:lang="en" height="150" width="50">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+       </mdui:UIInfo>
+       <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://test.ucom.gv.at/apps/rcPrebind/"/>
+       <ns2:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://samlproxy-test.ucom.gv.at/Saml2/disco" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDKjCCAhICCQCvtUqoXX/rUzANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJB
+            VDENMAsGA1UECAwEV2llbjENMAsGA1UEBwwEV2llbjEMMAoGA1UECgwDQktBMQsw
+            CQYDVQQLDAJJVDEPMA0GA1UEAwwGU0FUT1NBMB4XDTE3MDgyMzExMzYwM1oXDTI3
+            MDgyMTExMzYwM1owVzELMAkGA1UEBhMCQVQxDTALBgNVBAgMBFdpZW4xDTALBgNV
+            BAcMBFdpZW4xDDAKBgNVBAoMA0JLQTELMAkGA1UECwwCSVQxDzANBgNVBAMMBlNB
+            VE9TQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMCTzHrmtjm6tEMF
+            /PA0vl9S1jSG0O69e6NhA2MThrYwQ8OKHdir7QVXa+SkcoJZ2qhInliK6h8tXHs7
+            YlExE2ySXS6iePR1xtm6+iCe5Nh+KWkDJH7M+SyuY6E4cJ20ThGYRhPo7WDAza/T
+            7NKdFQ1IBidpI4uGDVhIXydtN4IT+Iv0WHEDe2gJgg7USBW0AMaPr9GKO7YCDut0
+            o0MuTz2nrFXN75sD6e+K4XM2wycktawz9HCSd/bwk7BTeJY5tJhSfrNdrzBOShPJ
+            /28JNhOAv9SYYBzQspCGQ60l1Q4yPiFfipWTIzOlyeHz/Extf8QDvxRElK43adCi
+            b+7WnC8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAOZwk0wEwwJYxGK7+HPXZQPeA
+            uNEuU1g0ojaNPKJYJJWO7p388eM7KHfRDT8d6drWUg8WxYJeAqQU7BanbBpd//6r
+            nVg6fGw59LPVACGO6/9vnxMUWIIt2lKnUpPjYxgMQzj+I7LJh85xunuLCiwggXHt
+            bFKOH5yj05W7jmnv1q5+FkOmJm251Ey8fzVDfWQVDgEb9FUkSlXFiR1gOB9RBlzC
+            Jl6X/b7YbVLVnBE5Wht3Cw2e9ZknLMqdSYX3w1476RzvGRC8WDyLPw4yYZJLl/4+
+            9Nu7VYnEkK20fLTGrB4EukB+qTOMW375rfbJUo00pZUCyKS5NOVFdxUR9ZmcNA==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://samlproxy-test.ucom.gv.at/Saml2/acs/post" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://samlproxy-test.ucom.gv.at/Saml2/acs/redirect" index="2"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">osAlliance (fuer BKA)</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.osalliance.com/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+    <md:GivenName>Rainer</md:GivenName>
+    <md:SurName>Hoerbe</md:SurName>
+    <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Robert</md:GivenName>
+    <md:SurName>Glock</md:SurName>
+    <md:EmailAddress>robert.glock@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://stp-auth-app.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">BKA Auth-App (Entwicklung, extern)</mdui:DisplayName>
+                <mdui:Description xml:lang="en">BKA Entwicklungsportal Auth-App (extern)</mdui:Description>
+            <mdui:Logo xml:lang="en" height="150" width="50">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        <!--IssuerDN: EMAILADDRESS=bmi-iv-2-e-ca@bmi.gv.at, CN=Portalverbund-CA, OU=IT-MS, O=Bundesministerium fuer Inneres, ST=Wien, C=AT
+SubjectDN: EMAILADDRESS=zertifikat@bka.gv.at, CN=stp-entw-bka-client, OU=IT, O=Bundeskanzleramt, ST=Wien, C=AT
+NotBefore: Tue Dec 20 09:32:16 CET 2016
+NotAfter: Wed Jan 09 09:32:16 CET 2019
+SerialNumber: 692 (0x2b4)
+SigAlgName: SHA256withRSA-->MIIFyTCCBLGgAwIBAgICArQwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMjAwODMyMTZaFw0xOTAxMDkwODMyMTZaMIGHMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxHDAaBgNVBAMTE3N0cC1lbnR3LWJrYS1jbGllbnQxIzAhBgkqhkiG9w0BCQEWFHplcnRpZmlrYXRAYmthLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2kiq16MAcTM9F2OS9MdBtxzj2ggJjneec4Tof+oepDUdiNNGD1fH1YEOjgvbK8oskWgzmnaQ3QrWDkfiD3iuuzK+uyg7/zlHwrWefcK2pi/m2jAsjMvWdYCZOkh3h/wD7nh2JQwCxK/u+XqnuLZpGBDeLLj1+GY1P/qtKMYlsgfpY3cXYJ/woZOYnVa+Yb8MTHsMzjPpJWVL6ADEDHLSYUgxv/33H9HHaPQsMFjCz5nF+VRECA0nzVKwWpSuugZni9+7L5YTQDyT3MQKPyDqFfg1EPKmAWQtQO89u/grDESY6WK2QqWbbyFzbLxM3V27J+z8O0Wwl39rM/CT7Hr3dwIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBRgQDdBshOPiaK4TlMOsjvYmzM8SDCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHplcnRpZmlrYXRAYmthLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBmDddocZjCT2iC8lxmCptd1LKLhE/uUTLFd5BQIE2nvmF+qGpwOGIyKRXoIRvGN+f56Nnwp+aU3jv2N5hu9DhEinlf1ndCO2bHiTa6rKqrd69tScKcQi9zjGwnb9uv1NAGNT7JqUcyThwm0znzFYOB1wYBurh/dAeZbDxzJC6vKv6YOh/Yey1gCPfMF1FQgQT9AtCe1oMP4tt8uvURWRbm3krDhSl/y1H3tX5IBVvr9trJ4zJbbFMPgKKAWhDH4B4iBZ6lS6H/0jZ9TIk2DZclLHJ5/6unj88fpWr+6uA8+qwjSVR69FvGurprFs9QL06BR0D/4W5y+4QRROGYMaUB</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp-auth-app.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp-auth-app.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp-auth-app.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp-auth-app.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">https://www.bka.gv.at/</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+        <md:Company>Bundeskanzleramt</md:Company>
+        <md:GivenName>Hotline</md:GivenName>
+        <md:EmailAddress>mailto:hotline@bka.gv.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 1 531 15-202777</md:TelephoneNumber>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:Company>Bundeskanzleramt</md:Company>
+        <md:GivenName>Hotline</md:GivenName>
+        <md:EmailAddress>mailto:hotline@bka.gv.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 1 531 15-202777</md:TelephoneNumber>
+    </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://demo.egiz.gv.at/demoportal_moaid-2.0/pvp2/metadata">
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <md:Extensions>
+        <mdui:UIInfo>
+          <mdui:DisplayName xml:lang="en">EGIZ MOA-ID (Demo)</mdui:DisplayName>
+          <mdui:Description xml:lang="en">EGIZ MOA-ID (Demo)</mdui:Description>
+          <mdui:Logo xml:lang="en" height="100" width="35">https://www.egiz.gv.at/templates/egiz/images/logo.png</mdui:Logo>
+        </mdui:UIInfo>
+      </md:Extensions>
+      <md:KeyDescriptor use="signing">
+        <ds:KeyInfo>
+          <ds:X509Data>
+            <ds:X509Certificate>MIIDFTCCAf0CBFUBnL4wDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCQVQxDTALBgNVBAcMBEdy
+              YXoxDTALBgNVBAoMBEVHSVoxIjAgBgNVBAMMGU1PQS1JRCBJRFAgKFRlc3QtVmVyc2lvbikwHhcN
+              MTUwMzEyMTQwMzQyWhcNMTcxMjA1MTQwMzQyWjBPMQswCQYDVQQGEwJBVDENMAsGA1UEBwwER3Jh
+              ejENMAsGA1UECgwERUdJWjEiMCAGA1UEAwwZTU9BLUlEIElEUCAoVGVzdC1WZXJzaW9uKTCCASIw
+              DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIJv0qe9UdvFYSL5I02GokwEVfsIGc7I7EhVNOxY
+              9mtUenmhqNrLsLBFg1IiPbk0ISWhORwPyVp/P3+GyGP339qZ68UCGV361E0Qm7cjPe/O3+r3HAM2
+              ZBN8oAZoHmphrNS6fKfY58kygtrUa+ZyMzYWTTiS32SCM8H55bluEFbeZksnbP0Y94IjkfJdgvzl
+              MxzrlSyoV2ymWBjvS5welDHgbCKyjsjIhTRjJu/olGJyen01/EpIVtSyDXO/2IS2v2O9UiFwAoyB
+              YAjPnl3HxK2A577nR63MxlgP0/s+r84uBqOAlb4qnbpU7lu5GxlCPkZmpRooCQYURioC+wjS6lMC
+              AwEAATANBgkqhkiG9w0BAQsFAAOCAQEABqO7kkq/gRahAvpsQg5LLZROGFr9pIPryN9xmJGgPo7j
+              KNl7rs7gNS0lmuluYWWnJcwAPbwFeb954VMB9x9p9QEw5RnXamUY9qa0LgcS/t/WX6vJkZPNhWph
+              8bXwh0MvlsbfrvDTJr8cjH3qfxITp7pa3xb1qE7suRffVUdDXawiXXnWJ/WJr+twVVHHEqnZz1lA
+              rSDLxM8sCjG8DeJw8vnQy5mPGrGVTBba4upc8UTY1nPV9U2GBJVYuAkoVRjbTlNvrL5JqNqypKcG
+              bejjWxgrzZkeQeU2hFcjunmgwGZ+ug2fq4kKkQftwcqeJTzyzBoo2+Oo4Tmfbsh/onxPWA==
+            </ds:X509Certificate>
+          </ds:X509Data>
+        </ds:KeyInfo>
+      </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://demo.egiz.gv.at/demoportal_moaid-2.0/pvp2/post"/>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://demo.egiz.gv.at/demoportal_moaid-2.0/pvp2/redirect"/>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://demo.egiz.gv.at/demoportal_moaid-2.0/pvp2/post"/>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://demo.egiz.gv.at/demoportal_moaid-2.0/pvp2/redirect"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.82" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="BPK" Name="urn:oid:1.2.40.0.10.2.1.1.149" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-FAMILY-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.80" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.55" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-CCS-URL" Name="urn:oid:1.2.40.0.10.2.1.1.261.64" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-PROF-REP-OID" Name="urn:oid:1.2.40.0.10.2.1.1.261.86" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="PRINCIPAL-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.20" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-AUTH-BLOCK" Name="urn:oid:1.2.40.0.10.2.1.1.261.62" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-LEGAL-PERSON-FULL-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.84" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-TYPE" Name="urn:oid:1.2.40.0.10.2.1.1.261.68" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.82" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-SIGNER-CERTIFICATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.66" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="ENC-BPK-LIST" Name="urn:oid:1.2.40.0.10.2.1.1.261.22" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-PROF-REP-DESCRIPTION" Name="urn:oid:1.2.40.0.10.2.1.1.261.88" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-GIVEN-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.78" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-LEGAL-PERSON-FULL-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.84" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-LEGAL-PERSON-SOURCE-PIN" Name="urn:oid:1.2.40.0.10.2.1.1.261.100" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="urn:oid:1.2.40.0.10.2.1.1.261.xx.xx" Name="urn:oid:1.2.40.0.10.2.1.1.261.xx.xx" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-REFERENCE-VALUE" Name="urn:oid:1.2.40.0.10.2.1.1.261.90" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-CITIZEN-QAA-LEVEL" Name="urn:oid:1.2.40.0.10.2.1.1.261.94" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-FULL-MANDATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.92" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-SOURCE-PIN" Name="urn:oid:1.2.40.0.10.2.1.1.261.70" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-ISSUING-NATION" Name="urn:oid:1.2.40.0.10.2.1.1.261.32" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-LEGAL-PERSON-SOURCE-PIN-TYPE" Name="urn:oid:1.2.40.0.10.2.1.1.261.76" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-BPK" Name="urn:oid:1.2.40.0.10.2.1.1.261.98" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="PVP-VERSION" Name="urn:oid:1.2.40.0.10.2.1.1.261.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-STORK-TOKEN" Name="urn:oid:1.2.40.0.10.2.1.1.261.96" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-LEGAL-PERSON-SOURCE-PIN" Name="urn:oid:1.2.40.0.10.2.1.1.261.100" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.55" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-SOURCE-PIN" Name="urn:oid:1.2.40.0.10.2.1.1.261.36" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="GIVEN-NAME" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-SOURCE-PIN-TYPE" Name="urn:oid:1.2.40.0.10.2.1.1.261.102" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-SECTOR-FOR-IDENTIFIER" Name="urn:oid:1.2.40.0.10.2.1.1.261.34" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-GIVEN-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.78" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-SOURCE-PIN-TYPE" Name="urn:oid:1.2.40.0.10.2.1.1.261.104" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATE-TYPE-OID" Name="urn:oid:1.2.40.0.10.2.1.1.261.106" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-IDENTITY-LINK" Name="urn:oid:1.2.40.0.10.2.1.1.261.38" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="EID-CITIZEN-QAA-EIDAS-LEVEL" Name="urn:oid:1.2.40.0.10.2.1.1.261.108" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+      <saml:Attribute FriendlyName="MANDATOR-NATURAL-PERSON-FAMILY-NAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.80" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+      <md:OrganizationName xml:lang="de">EGIZ</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="de">E-Government Innovationszentrum</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="de">http://www.egiz.gv.at</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+      <md:Company>E-Government Innovationszentrum</md:Company>
+      <md:GivenName>Lenz</md:GivenName>
+      <md:SurName>Thomas</md:SurName>
+      <md:EmailAddress>thomas.lenz@egiz.gv.at</md:EmailAddress>
+      <md:TelephoneNumber>+43 316 873 5525</md:TelephoneNumber>
+    </md:ContactPerson>
+  </md:EntityDescriptor>
+<md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://sp1.test.portalverbund.gv.at/sp.xml">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">AGIZ PVP2 sp1 Test</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            PVP2 Testumgebung sp1 Service (zentrales IdP Discovery Service)
+        </mdui:Description>
+        <mdui:Logo xml:lang="en" height="70" width="79">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>sp1.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIC6zCCAdOgAwIBAgIJAIkSELDiPK60MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDDgyZjdhODMwMmY0ODAeFw0xNjAyMjgxNjE1MjdaFw0yNjAyMjUxNjE1Mjda
+MBcxFTATBgNVBAMTDDgyZjdhODMwMmY0ODCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMOWMUhYcym8FSGzOedG9suMS+aK/culEXn04B84a/zlm9Dxv8wk
+ZXLT071OtQm6Rz9hdkC3e7AqkTeGnLzkpkzvgEjx/ManNoPFBnqfqgL9KE0t+FS2
+gRscy7VKDxdkMvzmXO+3+JjYYqnVVpbFUMFeOMaC74skFhKI8gc/j4a/8DH6TrPd
+SsyKi/k7QeRwP8QfnCapLbsGVTW4G+EuMcP6/Wl2zDcelpxh/dHv325yKCBbPvPC
++k/donPsw8OV4ItzehyOrtjWNCsQscgY+wWCidIMCPOkI3WRIGkeClJoz/dg8gSx
+HWkYacN6lze/xPYELR6WlzB9r2WOKjuHbRcCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+ODJmN2E4MzAyZjQ4MB0GA1UdDgQWBBQzGCch3EXA37qX6W3AtkE4KBzWSTANBgkq
+hkiG9w0BAQUFAAOCAQEAQP46xsyGllK/xk3Y7PCPkj28KrVwMsKeR8geRq8UswB2
+TQ+qhvWPZs5qUlNc1UGZat4nEu7T837ozJ7OeVNtgaLDLElfnerzss/ip/I0at5U
+g6g+/memzdipXb/5AF76353nK82dRmhO5M6EmVBdeAF1LGQkonmxBRRdMJ1OtGfq
+C9WdsDb3FQWX62QlBFuzf/sq1M/DSn9FHDlLHqtTyFFwGBqX6mlOa1u8e3cpCBpk
+o4WHxK0EHAKWMiSisR+VXm7BHqe6Qg6cnu9sipc3rkL3mXNvcWD4ktpkuxL9zEsd
+dMe4TwGTdA/GjVIW3ia5ouIVVuEaXrw8MlhsUoiIZQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+    <!--md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat-->    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST-SimpleSign" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp1.test.portalverbund.gv.at/Shibboleth.sso/SAML2/ECP" index="2"/>
+    <md:AttributeConsumingService index="1">
+      <md:ServiceName xml:lang="en">Identity Link Attributes + Certificate</md:ServiceName>
+      <md:RequestedAttribute FriendlyName="PVP-PRINCIPALNAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.20" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.55" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="EID-SIGNER-CERTIFICATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.66" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="EID-ISSUING-NATION" Name="urn:oid:1.2.40.0.10.2.1.1.261.32" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+   </md:AttributeConsumingService>
+   </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">AG-IZ (egov.at/BLSG/AG Integration und Zugänge)</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">AG-IZ</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.gv.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+ </md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" entityID="https://rocketchat.test.portalverbund.gv.at/_saml/metadata/sp">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">osAlliance Rocketchat SAML Test</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            Testeinbindung Rocket.Chat/PVP2-SAML im Auftrag des BKA
+        </mdui:Description>
+        <mdui:Logo xml:lang="en" height="70" width="79">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIDSDCCAjACCQDRGKcLAEFk9TANBgkqhkiG9w0BAQsFADBmMQswCQYDVQQGEwJB
+VDENMAsGA1UECBMEV2llbjENMAsGA1UEBxMEV2llbjESMBAGA1UEChMJVGVzdGZp
+cm1hMQswCQYDVQQLEwJJVDEYMBYGA1UEAxMPdGVzdC51Y29tLmd2LmF0MB4XDTE3
+MDYwODA5MDc0MVoXDTI3MDYwNjA5MDc0MVowZjELMAkGA1UEBhMCQVQxDTALBgNV
+BAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xEjAQBgNVBAoTCVRlc3RmaXJtYTELMAkG
+A1UECxMCSVQxGDAWBgNVBAMTD3Rlc3QudWNvbS5ndi5hdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAL1ICMCbkBfWAkhyn+6wlDch9Qr3Gv6oOV7ihEg9
+CuhszEz+qMsAiPfQD9MFnL0ysQ4+dZs/msDYKKxs0ow2WItHTDpKZdjXgx7jD0IL
+WEwd7+SpkP7hfqYUgTEV+dErh0i/uuUas+J0wsbgAQP+XpRdW4NT5GW1QqDfEGj2
+3lf8633slR73jEScMpxV9n+Zg719nMnwtYSCg4v/GvjZSsTJZawUIA0mBux63AtG
+FUaVcM3lPRvnF32deiQdvordtNf+wnD0p51J1/qnoCv+XarbRPHNhF9unZ9QjWo9
+Vul6XderCQ+kCn7A9wXbcrL+VsvXMzA69Tit2+QLq7IexZcCAwEAATANBgkqhkiG
+9w0BAQsFAAOCAQEALpO2Kan4RUFFatYHmFtlmSScxShFLswmsdwz8fCbNHVu0IJ/
+mDnEiX2dMhmZqlxdCe45MxsKHtkytuxYMcvI5YgOQsselYoodk4D3iAg557LXEuC
+U7B+KglI45P2N2oJM8TEiS5JVHFR9ny52dbKQIdcmlRKRoaddNjRxtnQTvv101NK
+nTpF+2c+81fmkLqRzZQYNwvzodvOuZ6puioqGnIPakzRRN8Fkbwx0ftkaYORI/bn
+F598U/Qa7rMBYo8opB8pmRzB6mD4eN4iPjvXz/364VcoAz/xvUb/+j88pYQ1Yxyi
+xpdBtvX8yfF3E4EY6qtuJCnOZNNLM93+f1lyFg==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://rocketchat.test.portalverbund.gv.at/_saml/logout/sp/" ResponseLocation="https://rocketchat.test.portalverbund.gv.at/_saml/logout/sp/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+	<md:AssertionConsumerService index="1" isDefault="true" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rocketchat.test.portalverbund.gv.at/_saml/validate/sp"/>
+</md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">AG-IZ (egov.at/BLSG/AG Integration und Zugänge)</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">AG-IZ</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.gv.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+</md:EntityDescriptor><md:EntityDescriptor xmlns:ns2="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://samlproxy.ucom.gv.at/sp">
+  <md:Extensions>
+     <ns2:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy1.test.portalverbund.gv.at/Saml2/disco" index="1"/>
+     <mdattr:EntityAttributes>
+       <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+       <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+     </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+       <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+       <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+       <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+       <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+       <mdui:UIInfo>
+         <mdui:DisplayName xml:lang="en">UCOM (BKA)</mdui:DisplayName>
+         <mdui:Description xml:lang="en"> 
+             UCOM / Rocketchat
+         </mdui:Description>
+         <mdui:Logo xml:lang="en" height="150" width="50">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+       </mdui:UIInfo>
+       <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://ucom.gv.at/apps/rcPrebind/"/>
+       <ns2:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://samlproxy.ucom.gv.at/Saml2/disco" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIDKjCCAhICCQCYd4mEn0F+2DANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJB
+            VDENMAsGA1UECAwEV2llbjENMAsGA1UEBwwEV2llbjEMMAoGA1UECgwDQktBMQsw
+            CQYDVQQLDAJJVDEPMA0GA1UEAwwGU0FUT1NBMB4XDTE3MDgyNDA3NTIxMVoXDTI3
+            MDgyMjA3NTIxMVowVzELMAkGA1UEBhMCQVQxDTALBgNVBAgMBFdpZW4xDTALBgNV
+            BAcMBFdpZW4xDDAKBgNVBAoMA0JLQTELMAkGA1UECwwCSVQxDzANBgNVBAMMBlNB
+            VE9TQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALfNYAjD5GNZKNEp
+            53W6nZTLd7B9xXXekFFOapm4nb/kbLjWtOWOe/bDxj1LrYGz/xh39/KKNycdRcJ5
+            8mzoqe7L8T8BdK/j72rCeviZQCXGXPZdtt3T8vinCudl3NI5OPCfMO0VK4awpmDc
+            6QbAnLW7XOb30Evj0KOAmCCjwTtHzSEMpnP7FycdLG1sugiu/jQ2VfKETw76jjxz
+            toOAEUcPLTCMSEoMylsqvq3ZQ/ovmr4xjb/zaEk75LQKPKA8aIDna3B6PCpzMgpf
+            kP7QuCSmqplXnF+4owpoWY4ioo7g12k8qUKZ2K4CzT2Am8ezPlD1PzJOEIY3tjgq
+            sFXnpYsCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAiXzSSSkd/HA1Ami919db0I2z
+            F+S/XMKYajor8dvfT1OuFoVjkNOhD5jSBtyNF3BUUlYOv5AQ37jVLwMAD0GV5H5A
+            ISKgMyapcy+mjVKRZ4nPJv5UZf4qxmgqooPIufBacFFyGignHO0iKihyhvSeIPbq
+            2avgAB7oskHsTFmRB9M/ZAfdF9HCVMRrOCKY9QziqI79aPKFHxUmUtjixDx3V5VH
+            FFXf/sQpuY8sYLYji6JckZoZxT0og/PA118j8fA7xUUTqtnC3+peMcuIY7DVYmDX
+            zr9dsMQT6ouDrDO6o28DSh9wrjgtndTiU+TE5rtoSVI6N6wVG2tR2repidYFOw==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://samlproxy.ucom.gv.at/Saml2/acs/post" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://samlproxy.ucom.gv.at/Saml2/acs/redirect" index="2"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">osAlliance (fuer BKA)</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.osalliance.com/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+    <md:GivenName>Roland</md:GivenName>
+    <md:SurName>Alton</md:SurName>
+    <md:EmailAddress>ras@osalliance.com</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Robert</md:GivenName>
+    <md:SurName>Glock</md:SurName>
+    <md:EmailAddress>robert.glock@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://mdreg.test.portalverbund.gv.at/sp">
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">PVZD Metadata Registry (Test)</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            PV Zentrale Dienste Portalmeldungen/Metadaten (Test)
+        </mdui:Description>
+        <mdui:Logo xml:lang="en" height="70" width="79">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://mdreg.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>echo.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIID+jCCAmKgAwIBAgIJAPBpAGC1XgSoMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV BAMTETQ5bWRyZWd0ZXN0cHZndmF0MB4XDTE3MTEyNzIxNDUxMloXDTI3MTEyNTIx
+NDUxMlowHDEaMBgGA1UEAxMRNDltZHJlZ3Rlc3Rwdmd2YXQwggGiMA0GCSqGSIb3 DQEBAQUAA4IBjwAwggGKAoIBgQCzrwRUeyr5mJUu7j8j/n9TUVh9pOTt9M8PYr0r
+Cb51/u1AVUO34OZd9ejRFVYUGyvNqzxCTlW8X3uOjOJvDoHLXTKxWziiwsBYLcy6 LuGfbBuS8XtGpQ+Y1AvL3+L9z0YBNJhhfQZDvwjzwj6ttJZZ4+Umy3WMeaTu8IDf
+6wt/NjhIhNibbc0xl5sDwE5yI25/kx9c9KzWNX3BiYp+BU4CSLPIrmd9tyv7xt/f Z/kqbaVd/ICslGvWGLqNzPg0r8csJ6v+g5gAe13dD2LwmOGc+V6OYunHwuXsJT91
+Yj+1TBFRJgLoP/+YVOjm6vlbw71+AsvVf75jji6Yk+sO+K1mqSPSR9iGfG5Q3eeY ygyFe4W6Q3bN6hCXV6FqCeriX+AFm6NW6GXRw5TMcvFyWjUdNahGI0+NPUDBzPrn
+VYbG2e00O/np3WveeyvfSCq8biY+3EFcojqAFKYSd6kJtBGcE5jcKM1sWEto2POb Oay3fL9HI7cofZM50b+BwuGLS50CAwEAAaM/MD0wHAYDVR0RBBUwE4IRNDltZHJl
+Z3Rlc3Rwdmd2YXQwHQYDVR0OBBYEFC6k4eI2hFgyYbJaLELw+ppk7ttEMA0GCSqG SIb3DQEBCwUAA4IBgQBSE09qMG2by5q4JzfcMjAGj6U6qD3fuA6OxjckZu8JcKto
+y3ANPL167tZRNhHOJgs/1gpQS799uwERLSWEG6D/ly8SrYCqBDctfuEEu4Mk6wcL OtVw2jmYjT735pAng/ZviH1dRDD+dX+dQ/Rh7xiWsTu0kQ6SN+WRkruCB2pacMub
+I91K2y/tsuOVAj5WYCrb2kgCa/s6vBfnxNg1Cq9lSopnA6pQhck1uLQcKqcw5mw9 LrcTQzbBbp+PnG+ror18/IqNXVDJRSlLOWPxy+4iwxrVbpdQFk97xUukipM9CWdQ
+2uuDD0yu16clmzktgPeGnj0ZmWzUrLDxEin2W4uPHjZXBjni7AeiYVNCQJAvTwBn S1OGbKPsCj29C236/Bs63YWhYSJ+GeJx1btAXNZe5Ve9N1WYszjhkmGZU8cEcJZp
+U9tc0Y3q90nDLMMuvnQiUMR3WI56NvAnUUwfFXnc2gmu+nffsY9vflNv9ivfMiog wxMXUVOG9AmkHBhC+Uc=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://mdreg.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mdreg.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AttributeConsumingService index="1">
+      <md:ServiceName xml:lang="en">Identity Link Attributes + Certificate</md:ServiceName>
+      <md:RequestedAttribute FriendlyName="PVP-PRINCIPALNAME" Name="urn:oid:1.2.40.0.10.2.1.1.261.20" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="BIRTHDATE" Name="urn:oid:1.2.40.0.10.2.1.1.55" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="EID-SIGNER-CERTIFICATE" Name="urn:oid:1.2.40.0.10.2.1.1.261.66" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+      <md:RequestedAttribute FriendlyName="EID-ISSUING-NATION" Name="urn:oid:1.2.40.0.10.2.1.1.261.32" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+   </md:AttributeConsumingService>
+   </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">AG-IZ (egov.at/BLSG/AG Integration und Zugänge)</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">AG-IZ</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.gv.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+ </md:EntityDescriptor><md:EntityDescriptor entityID="https://idp.devel.magwien.gv.at/stdportal-idp/test.portalverbund.gv.at">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <alg:SigningMethod MinKeySize="256" MaxKeySize="511" Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+        <alg:SigningMethod MinKeySize="2048" MaxKeySize="4096" Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+        <mdui:UIInfo>
+          <mdui:DisplayName xml:lang="en">Mag Wien Test-IDP</mdui:DisplayName>
+          <mdui:Description xml:lang="en">Magistrat Wien Test-IDP</mdui:Description>
+          <mdui:DisplayName xml:lang="de">Mag Wien Test-IDP</mdui:DisplayName>
+          <mdui:Description xml:lang="de">Magistrat Wien Test-IDP</mdui:Description>
+          <mdui:Logo xml:lang="en" height="70" width="79">https://www.portalverbund.at/sites/www.portalverbund.at/img/logo.png</mdui:Logo>
+        </mdui:UIInfo>
+      </md:Extensions>
+      <md:KeyDescriptor use="signing">
+        <ds:KeyInfo>
+          <ds:X509Data>
+            <ds:X509Certificate><!--Certificate:     Data:         Version: 3 (0x2)         Serial Number: 603 (0x25b)     Signature Algorithm: sha256WithRSAEncryption         Issuer: C=AT, ST=Wien, O=Bundesministerium fuer Inneres, OU=IT-MS, CN=Portalverbund-CA/emailAddress=bmi-iv-2-e-ca@bmi.gv.at         Validity             Not Before: Jul 15 07:56:13 2015 GMT             Not After : Aug  3 07:56:13 2017 GMT         Subject: C=AT, O=Magistrat der Stadt Wien, OU=MA 14, CN=gondor.magwien.gv.at/emailAddress=post@ma14.wien.gv.at         Subject Public Key Info:             Public Key Algorithm: rsaEncryption                 Public-Key: (2048 bit)                 Modulus:                     00:db:0b:d2:c7:8f:79:a7:02:65:37:a2:0b:6b:3f:                     bf:d1:34:0a:01:1b:fb:53:4b:c9:2e:08:26:40:18:                     5e:62:19:1a:e6:71:2d:e8:ea:bd:77:66:5d:eb:f4:                     25:4c:b4:95:70:da:74:18:26:77:7f:59:0c:8f:ce:                     36:31:ab:67:1a:a0:0f:76:6b:67:48:44:13:2e:c3:                     9b:ea:12:8e:0b:56:44:d6:0d:b2:28:96:31:33:b8:                     b2:8e:c6:fe:65:50:a7:7c:36:5e:82:7f:8f:e6:7d:                     3a:1b:3c:e1:f1:49:50:bc:3e:61:fe:51:95:13:ff:                     cf:64:0b:b7:e6:86:36:22:94:80:92:f1:44:91:ef:                     2c:4f:d6:5d:a8:51:96:75:c2:c5:9f:3a:6d:f0:91:                     db:bd:f1:cb:81:60:ba:dc:df:fb:51:b5:6e:2c:14:                     3f:9e:8d:32:9c:90:65:50:1f:91:1a:6d:46:f8:79:                     19:97:54:b1:36:0f:6e:97:84:9a:92:29:7f:22:25:                     da:74:0f:82:73:d5:c4:69:5f:d6:d1:d5:76:1c:4c:                     e4:4b:c9:ad:49:8e:f9:6e:33:2c:d2:38:9e:a7:0c:                     40:cc:ac:22:d3:d4:9f:a3:cc:6b:b3:c5:72:1b:a8:                     64:c0:5e:b7:f8:fc:aa:b4:be:55:dc:c4:b6:2c:e4:                     7f:6b                 Exponent: 65537 (0x10001)         X509v3 extensions:             X509v3 Basic Constraints:                  CA:FALSE             X509v3 Key Usage:                  Digital Signature, Non Repudiation, Key Encipherment             Netscape Comment:                  OpenSSL Generated Certificate             X509v3 Subject Key Identifier:                  30:7B:18:83:4B:BA:D8:2E:60:38:B7:4D:F2:EC:68:F5:C6:85:7A:31             X509v3 Authority Key Identifier:                  keyid:A6:1E:F4:5E:1A:43:B4:88:DE:A2:C8:BD:68:65:03:C5:30:6F:66:D3                 DirName:/C=AT/ST=Wien/L=Wien/O=Bundesministerium fuer Inneres/OU=IT-MS/CN=PortalRoot-CA/emailAddress=bmi-iv-2-e-ca@bmi.gv.at                 serial:01              X509v3 Subject Alternative Name:                  email:post@ma14.wien.gv.at             X509v3 Issuer Alternative Name:                  email:bmi-iv-2-e-ca@bmi.gv.at             X509v3 CRL Distribution Points:                   Full Name:                   URI:http://portal.bmi.gv.at/ref/pki/portalCA/PortalV.crl              Authority Information Access:                  CA Issuers - URI:http://portal.bmi.gv.at/ref/pki/portalCA/index.html              1.2.40.0.10.1.1.1:                  ...     Signature Algorithm: sha256WithRSAEncryption          02:91:6c:1a:d0:4d:d7:71:04:4e:d1:9e:fb:c0:2a:90:a5:6c:          9a:94:5b:fa:4c:7f:4e:0f:d1:90:91:7b:20:e4:fd:b8:52:aa:          e6:e8:2a:5f:ab:4c:1d:eb:5d:84:7c:2e:72:e2:1a:93:cf:69:          ce:a8:d1:e8:ea:57:2f:a0:c3:90:8a:68:e2:99:94:e9:e2:d2:          dc:32:0a:93:b7:93:71:9e:21:0a:b1:18:47:ff:83:8a:32:bb:          5a:2b:bf:de:af:09:ff:f0:fc:8a:ef:34:fe:37:04:d7:a3:65:          21:4c:b5:b5:78:ef:04:da:2a:c8:b5:9d:63:c8:df:1f:ba:3d:          49:dc:e7:e8:10:9d:c7:f8:d4:b1:5a:e4:b1:af:ba:5b:37:2e:          c7:be:73:ed:1a:a3:ce:96:98:30:e2:78:51:40:ce:4e:3f:40:          89:c5:26:f0:3b:58:69:04:ce:6f:77:ec:84:6a:e5:d9:ac:2c:          6f:ec:06:42:2f:b4:aa:91:1b:c8:57:60:f8:c2:7a:fd:75:d0:          2c:1f:67:86:c1:77:ca:56:05:ca:0f:8e:99:f9:2f:0b:f4:22:          ff:11:44:1d:94:45:0b:a8:8e:4f:95:0f:6a:25:62:a9:e4:fe:          54:32:f0:5d:d1:23:34:4e:f7:7a:5a:72:58:03:5d:6f:4b:a2:          cc:d1:b1:c6 -->MIIFxjCCBK6gAwIBAgICAlswDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNTA3MTUwNzU2MTNaFw0xNzA4MDMwNzU2MTNaMIGEMQswCQYDVQQGEwJBVDEhMB8GA1UEChMYTWFnaXN0cmF0IGRlciBTdGFkdCBXaWVuMQ4wDAYDVQQLEwVNQSAxNDEdMBsGA1UEAxMUZ29uZG9yLm1hZ3dpZW4uZ3YuYXQxIzAhBgkqhkiG9w0BCQEWFHBvc3RAbWExNC53aWVuLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2wvSx495pwJlN6ILaz+/0TQKARv7U0vJLggmQBheYhka5nEt6Oq9d2Zd6/QlTLSVcNp0GCZ3f1kMj842MatnGqAPdmtnSEQTLsOb6hKOC1ZE1g2yKJYxM7iyjsb+ZVCnfDZegn+P5n06Gzzh8UlQvD5h/lGVE//PZAu35oY2IpSAkvFEke8sT9ZdqFGWdcLFnzpt8JHbvfHLgWC63N/7UbVuLBQ/no0ynJBlUB+RGm1G+HkZl1SxNg9ul4Sakil/IiXadA+Cc9XEaV/W0dV2HEzkS8mtSY75bjMs0jiepwxAzKwi09Sfo8xrs8VyG6hkwF63+PyqtL5V3MS2LOR/awIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQwexiDS7rYLmA4t03y7Gj1xoV6MTCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHBvc3RAbWExNC53aWVuLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQACkWwa0E3XcQRO0Z77wCqQpWyalFv6TH9OD9GQkXsg5P24Uqrm6Cpfq0wd612EfC5y4hqTz2nOqNHo6lcvoMOQimjimZTp4tLcMgqTt5NxniEKsRhH/4OKMrtaK7/erwn/8PyK7zT+NwTXo2UhTLW1eO8E2irItZ1jyN8fuj1J3OfoEJ3H+NSxWuSxr7pbNy7HvnPtGqPOlpgw4nhRQM5OP0CJxSbwO1hpBM5vd+yEauXZrCxv7AZCL7SqkRvIV2D4wnr9ddAsH2eGwXfKVgXKD46Z+S8L9CL/EUQdlEULqI5PlQ9qJWKp5P5UMvBd0SM0Tvd6WnJYA11vS6LM0bHG</ds:X509Certificate>
+          </ds:X509Data>
+        </ds:KeyInfo>
+      </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.devel.magwien.gv.at/stdportal-idp/test.portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://idp.devel.magwien.gv.at/stdportal-idp/test.portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.devel.magwien.gv.at/stdportal-idp/test.portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.devel.magwien.gv.at/stdportal-idp/test.portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+      <md:OrganizationName xml:lang="de">Magistrat der Stadt Wien</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="de">Magistrat der Stadt Wien</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="de">https://www.wien.gv.at</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+      <md:GivenName>Stefan</md:GivenName>
+      <md:SurName>Eigelsreiter</md:SurName>
+      <md:EmailAddress>stefan.eigelsreiter@wien.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+      <md:GivenName>Peter</md:GivenName>
+      <md:SurName>Reif</md:SurName>
+      <md:EmailAddress>peter.reif@wien.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+  </md:EntityDescriptor>
+<md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:disco="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://sp2.test.portalverbund.gv.at/sp.xml">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">Test SP with centrla IDP Discovery</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            Test SP with centrla IDP Discovery
+        </mdui:Description>
+        <mdui:Logo xml:lang="en" height="70" width="79">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp2.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <disco:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp2.test.portalverbund.gv.at/Shibboleth.sso/DS" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIC6zCCAdOgAwIBAgIJAIkSELDiPK60MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDDgyZjdhODMwMmY0ODAeFw0xNjAyMjgxNjE1MjdaFw0yNjAyMjUxNjE1Mjda
+MBcxFTATBgNVBAMTDDgyZjdhODMwMmY0ODCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMOWMUhYcym8FSGzOedG9suMS+aK/culEXn04B84a/zlm9Dxv8wk
+ZXLT071OtQm6Rz9hdkC3e7AqkTeGnLzkpkzvgEjx/ManNoPFBnqfqgL9KE0t+FS2
+gRscy7VKDxdkMvzmXO+3+JjYYqnVVpbFUMFeOMaC74skFhKI8gc/j4a/8DH6TrPd
+SsyKi/k7QeRwP8QfnCapLbsGVTW4G+EuMcP6/Wl2zDcelpxh/dHv325yKCBbPvPC
++k/donPsw8OV4ItzehyOrtjWNCsQscgY+wWCidIMCPOkI3WRIGkeClJoz/dg8gSx
+HWkYacN6lze/xPYELR6WlzB9r2WOKjuHbRcCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+ODJmN2E4MzAyZjQ4MB0GA1UdDgQWBBQzGCch3EXA37qX6W3AtkE4KBzWSTANBgkq
+hkiG9w0BAQUFAAOCAQEAQP46xsyGllK/xk3Y7PCPkj28KrVwMsKeR8geRq8UswB2
+TQ+qhvWPZs5qUlNc1UGZat4nEu7T837ozJ7OeVNtgaLDLElfnerzss/ip/I0at5U
+g6g+/memzdipXb/5AF76353nK82dRmhO5M6EmVBdeAF1LGQkonmxBRRdMJ1OtGfq
+C9WdsDb3FQWX62QlBFuzf/sq1M/DSn9FHDlLHqtTyFFwGBqX6mlOa1u8e3cpCBpk
+o4WHxK0EHAKWMiSisR+VXm7BHqe6Qg6cnu9sipc3rkL3mXNvcWD4ktpkuxL9zEsd
+dMe4TwGTdA/GjVIW3ia5ouIVVuEaXrw8MlhsUoiIZQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp2.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp2.test.portalverbund.gv.at/Shibboleth.sso/SLO/POST"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp2.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+  </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">AG-IZ (egov.at/BLSG/AG Integration und Zugänge)</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">AG-IZ</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.gv.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://echo.test.portalverbund.gv.at/sp.xml">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">osAlliance uCom Test</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            Testeinbindung ucom/Rocket.Chat im Auftrag des BKA
+        </mdui:Description>
+        <mdui:Logo xml:lang="en" height="70" width="79">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>echo.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIC6zCCAdOgAwIBAgIJAIkSELDiPK60MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDDgyZjdhODMwMmY0ODAeFw0xNjAyMjgxNjE1MjdaFw0yNjAyMjUxNjE1Mjda
+MBcxFTATBgNVBAMTDDgyZjdhODMwMmY0ODCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMOWMUhYcym8FSGzOedG9suMS+aK/culEXn04B84a/zlm9Dxv8wk
+ZXLT071OtQm6Rz9hdkC3e7AqkTeGnLzkpkzvgEjx/ManNoPFBnqfqgL9KE0t+FS2
+gRscy7VKDxdkMvzmXO+3+JjYYqnVVpbFUMFeOMaC74skFhKI8gc/j4a/8DH6TrPd
+SsyKi/k7QeRwP8QfnCapLbsGVTW4G+EuMcP6/Wl2zDcelpxh/dHv325yKCBbPvPC
++k/donPsw8OV4ItzehyOrtjWNCsQscgY+wWCidIMCPOkI3WRIGkeClJoz/dg8gSx
+HWkYacN6lze/xPYELR6WlzB9r2WOKjuHbRcCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+ODJmN2E4MzAyZjQ4MB0GA1UdDgQWBBQzGCch3EXA37qX6W3AtkE4KBzWSTANBgkq
+hkiG9w0BAQUFAAOCAQEAQP46xsyGllK/xk3Y7PCPkj28KrVwMsKeR8geRq8UswB2
+TQ+qhvWPZs5qUlNc1UGZat4nEu7T837ozJ7OeVNtgaLDLElfnerzss/ip/I0at5U
+g6g+/memzdipXb/5AF76353nK82dRmhO5M6EmVBdeAF1LGQkonmxBRRdMJ1OtGfq
+C9WdsDb3FQWX62QlBFuzf/sq1M/DSn9FHDlLHqtTyFFwGBqX6mlOa1u8e3cpCBpk
+o4WHxK0EHAKWMiSisR+VXm7BHqe6Qg6cnu9sipc3rkL3mXNvcWD4ktpkuxL9zEsd
+dMe4TwGTdA/GjVIW3ia5ouIVVuEaXrw8MlhsUoiIZQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST-SimpleSign" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://echo.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+   </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">AG-IZ (egov.at/BLSG/AG Integration und Zugänge)</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">AG-IZ</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.gv.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+ </md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" entityID="https://v-portal.tirol.gv.at/IdPWeb/shibboleth">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="de">Portal Tirol IDP</mdui:DisplayName>
+                <mdui:DisplayName xml:lang="en">Portal Tirol IDP</mdui:DisplayName>
+                <mdui:Description xml:lang="de">Shibboleth Identity Provider im Portal Tirol
+                </mdui:Description>
+                <mdui:Logo height="114" width="114">https://static.tirol.gv.at/design/3.0.3/img/base/v-touch-icon-114x114-precomposed.png
+                </mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIGqDCCBZCgAwIBAgICAd4wDQYJKoZIhvcNAQEFBQAwgZgxCzAJBgNVBAYTAkFU
+                    MQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVy
+                    IElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5k
+                    LUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0x
+                    MzEwMTAwNjUzNTRaFw0xNTEwMzAwNjUzNTRaMH0xCzAJBgNVBAYTAkFUMQ4wDAYD
+                    VQQIEwVUaXJvbDETMBEGA1UEChMKTGFuZCBUaXJvbDEqMCgGA1UECxMhRFZULURh
+                    dGVuLVZlcmFyYmVpdHVuZy1UaXJvbCBHbWJIMR0wGwYDVQQDExR2LXBvcnRhbC50
+                    aXJvbC5ndi5hdDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANiIQ1Jq
+                    XisUirZaQ42/WDMjtz/AoGhzOCpTSIzb0JwL8BIzus/6Dd2tdcFY1CQaPcaKNL7z
+                    IzTK4RG0pzhnJIeo9oiD+refYZpuOgQQMHtrgYExPVaDOiDbG0gPuIOR+nHK1ZGP
+                    XQ7wToN5l17gmNuUzswQ9OFmNGNkgFBwo89cRxlkTFzeF9uAzH+GPEh4sBOprC6W
+                    dAMI3Ags8VRWeAeJiygpENrRiydeWB7Hnu0jX/qdRCTswENBKJotqRPKCCBdmigV
+                    lSsabMYwrF6+bwgvrWgdtoqO/JXe640UnSxG0BWiqiMKpDTfkWG/AGgDSn4m1xtJ
+                    1IdgEb38s1I+56+EgDp2BqqLB64ZZFWACcWcoGbClP9Q1M5RKmZfYEq5XbhGJsf5
+                    zWESGAQBb1q123wg8ypkgDnD6R0qUInx6BTeWqvyziVP0WoD8OQvuLtFhDgnlVc/
+                    PtyIebpa6jqaoXmHALlReFaJVCk3bdPT4mMmHPYiVInMQm7tP2GgwGvV7aGLnyEA
+                    1jnyU5rDjA6Ob83Tk7C4D453R//gCLBnDH8gME2BOOqIHBBf9RUEOvC3E49ZFxrI
+                    gBw7OejRhEfOZCrj/22avU5ZQ3vqqBKGXy0niALBj4mteufNio27oGgfZCGfAbv9
+                    PgT28+fT5Rxoh5Rdr/DnPc7Vjnbj9BP5XDQtAgMBAAGjggIUMIICEDAJBgNVHRME
+                    AjAAMAsGA1UdDwQEAwIF4DAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0
+                    ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFBaHjxkWyxn0FypvSxkHxumrm+VLMIHR
+                    BgNVHSMEgckwgcaAFKYe9F4aQ7SI3qLIvWhlA8Uwb2bToYGqpIGnMIGkMQswCQYD
+                    VQQGEwJBVDENMAsGA1UECBMEV2llbjENMAsGA1UEBxMEV2llbjEnMCUGA1UEChMe
+                    QnVuZGVzbWluaXN0ZXJpdW0gZnVlciBJbm5lcmVzMQ4wDAYDVQQLEwVJVC1NUzEW
+                    MBQGA1UEAxMNUG9ydGFsUm9vdC1DQTEmMCQGCSqGSIb3DQEJARYXYm1pLWl2LTIt
+                    ZS1jYUBibWkuZ3YuYXSCAQEwCQYDVR0RBAIwADAiBgNVHRIEGzAZgRdibWktaXYt
+                    Mi1lLWNhQGJtaS5ndi5hdDBFBgNVHR8EPjA8MDqgOKA2hjRodHRwOi8vcG9ydGFs
+                    LmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL1BvcnRhbFYuY3JsME8GCCsGAQUF
+                    BwEBBEMwQTA/BggrBgEFBQcwAoYzaHR0cDovL3BvcnRhbC5ibWkuZ3YuYXQvcmVm
+                    L3BraS9wb3J0YWxDQS9pbmRleC5odG1sMA4GByooAAoBAQEEAwEB/zANBgkqhkiG
+                    9w0BAQUFAAOCAQEAlAMfC/I9pMKqZabSyfBq/OuadZYPmV+wnqmeE5RMfznNWluS
+                    aGGY2nKGPFKtm6dr+T53h+9pcAFg/qRPc5Y4fiZDOxJ+I/XkAGbI7yYLG85SjKly
+                    GMf6eKvyCvv7C3UcTKpqH5RRqvZKwCPQ9R7qSUp6w4CemKb/vNROF1RFiYuvS1rf
+                    7tx+ajjavYtsKnbybwgu4oAOHmrToVMIQuKZ2d6jn5iBZmL6DJ2GlUk4el4JNY9u
+                    tV7QHAjRumkiCsB/iKE0PiaEARanODivPE9/JIitv+D+fC3nJvCAA6ijrY47TAtL
+                    YG/iiovDAv1ElBcNTAqaYmvJ77na/M1JXkeLEQ==
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://v-portal.tirol.gv.at/IdPWeb/profile/SAML2/POST/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://v-portal.tirol.gv.at/IdPWeb/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="de">Land Tirol
+        </md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="de">Land Tirol - Portal V-Stage
+        </md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="de">https://www.tirol.gv.at/
+        </md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Peter
+        </md:GivenName>
+        <md:SurName>Erler
+        </md:SurName>
+        <md:EmailAddress>peter.erler@tirol.gv.at
+        </md:EmailAddress>
+        </md:ContactPerson>
+        <md:ContactPerson contactType="support">
+        <md:GivenName>Servicedesk
+        </md:GivenName>
+        <md:EmailAddress>servicedesk@tirol.gv.at
+        </md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:disco="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" entityID="https://proxy5.test.portalverbund.gv.at/sp">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <disco:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy1.test.portalverbund.gv.at/Saml2/disco" index="1"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="de">SP5 Proxy mit IDP-Discovery(Dev)</mdui:DisplayName>
+        <mdui:Description xml:lang="de">IDP-Discovery Proxy für SP5 (Entwicklung)</mdui:Description>
+        <mdui:Logo xml:lang="en" height="150" width="50">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIDKjCCAhICCQDvIVkfS3qjXzANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJB
+            VDENMAsGA1UECAwEV2llbjENMAsGA1UEBwwEV2llbjEMMAoGA1UECgwDQktBMQsw
+            CQYDVQQLDAJJVDEPMA0GA1UEAwwGU0FUT1NBMB4XDTE3MDkxNTE4MjcxMFoXDTI3
+            MDkxMzE4MjcxMFowVzELMAkGA1UEBhMCQVQxDTALBgNVBAgMBFdpZW4xDTALBgNV
+            BAcMBFdpZW4xDDAKBgNVBAoMA0JLQTELMAkGA1UECwwCSVQxDzANBgNVBAMMBlNB
+            VE9TQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANV9qqf1TfVXC/Gk
+            wC2JwWBluqP0R6L89fPTbR0+Fxg/O33rn+J3h+UN8Zd4SDCfbuTrk3J0amlTFSFW
+            JswbklqmObLjkECJo37dwSG+CNowhpdfJrjHXCEi84iN8inFGAbgUhOzzl1sLQnW
+            9HbCe9eSIXJC1fu8IISwk/Ax2YvvMcpP27iN70Al1UPQ2NcHoDS9HFCAwdrUzHdd
+            oYkR+Tc1XK3lNGZHiAutr1zXSHoI3nhcD17dQjfzZnanqs6xWX2x/PHxXlFRDgsj
+            XbR/wSOEtKMJcSQHjxALWzKaLdk7Erzq1d/MvEQPzAAlo2vTOELro8fx2krY7Trt
+            Nd960ykCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAyR5yPOWCY2fGINRfaRYRVfLC
+            9+vR1SWl0AY0kk5VEePNOqjIcRzqIJm6iPU/Mgpt8+BfJjBPvP7Eh5qetK+Ky3hB
+            /OB2hb5+uYGYR1Q6TshOOu+PVKOFPDzvtZVJWgbO5FSDv3ClErwavd8HRsd0Oc+R
+            2IulH7RCeRC4+XmrC/yq6ZNwjgp4wNO5XKF0RWcGzrxIP4UtvIMlaG39v/ekahLI
+            k6ky+ZqfAOjWUAjOw9MycmnNgfSDkpdFsbbuvfBXifLt/46cXDGA8dkbfb4ymbFO
+            7h+6xyqiMT8OdcfJQ/KSAYsFW0gXZDur7K3BGtiwCsvtQE9iFtUOorjhw/cJ0A==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy1.test.portalverbund.gv.at/Saml2/acs/post" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://proxy1.test.portalverbund.gv.at/Saml2/acs/redirect" index="2"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">osAlliance</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.osalliance.com/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Rainer</md:GivenName>
+    <md:SurName>Hoerbe</md:SurName>
+    <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="support">
+    <md:GivenName>Rainer</md:GivenName>
+    <md:SurName>Hoerbe</md:SurName>
+    <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://termino.gv.at/sp">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <DigestMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <SigningMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+      <SigningMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">Termino</mdui:DisplayName>
+        <mdui:DisplayName xml:lang="de">Termino</mdui:DisplayName>
+        <mdui:Description xml:lang="en">Termino - Coordinate and share appointments</mdui:Description>
+        <mdui:Description xml:lang="de">Termino - Termine abstimmen und teilen</mdui:Description>
+      </mdui:UIInfo>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://termino.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://termino.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIEFDCCAnygAwIBAgIJAJyoDigFeu28MA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV BAMTEXd3dy50ZXJtaW5vLmd2LmF0MB4XDTE4MTAyMjEyNTQ1MVoXDTI4MTAxOTEy
+            NTQ1MVowHDEaMBgGA1UEAxMRd3d3LnRlcm1pbm8uZ3YuYXQwggGiMA0GCSqGSIb3 DQEBAQUAA4IBjwAwggGKAoIBgQC3YI/ijLkMAbgJS8apeYMAlZhRI2CJR5EZ00sb
+            JDDnSpTSzjL72h9ePaIoLrGhHm6yAWwDLI7CrDVZcty3bmWOgGUV5gWWkvL5dUHQ sweSXEQ4Rz4WR0XL1VlYTth4hv4Wv4uMPkTDwd1F7Gh95kuKNUihCmDaA/gUN7yB
+            VBUw3R9LxqJVx1G53F9FutXgmX9306PlN+2BsnV78u2JoGpzNflx1ueNezoJMRQH C4kAD4gdpmDK5OhOIYpKz9Db3vuLu7cOOz4buM5LQXUb4O9p6gB0JFC/dbkVzGAr
+            totZe8ORl0PkCLGGZVwgdZKJusOjD7XbjgK1nhRKUHZiF/G1+4jdBMhHmMPo4U9D RV5EhrOexjra1y209gRuX5Gt+YBNoh/M47dvzfsKQwB9KdSYqrY6Ti+ZNmrKwdpd
+            CEc21AZsfhoCnPCwi6d+nG7keci4jSvX96HFBd0/9oVzT22H66YQzSV+89GJFU9t TL+GZzBxizhW2h3qrLY2heZa/B8CAwEAAaNZMFcwNgYDVR0RBC8wLYIRd3d3LnRl
+            cm1pbm8uZ3YuYXSGGGh0dHBzOi8vdGVybWluby5ndi5hdC9zcDAdBgNVHQ4EFgQU kYXxEkMuyD2Vq4USBcSx1b9AYJkwDQYJKoZIhvcNAQELBQADggGBAJVYr8v46DkK
+            bcipdQHBy2pDS4rFO75LTpAuSFOEl5k68yYaCQRP1nMxlnKX12mXPX1lkpgjstFV o6IZMUulbohqcVyKHC4OVhNShIZJNcz2U9GjX8RPkvWIldkye1jt0F7lAuvgC5tG
+            Kn82706MUwPlnjHJoej0MccLjC7QTFeuRdqO86pHpFlMqKj3fqup9tRks8bbAMfB hwbSWe5T0opinSZPa5pLZhwZUTCvFQznuiq464WltpzeUv1pCawoMJSM7G0Wh/FV
+            w9a/fKvCYdhe+dvgZHerAsseBTmGsBeZSFYL+nTxzcey0SVvAThORU6sr53X17oq 8VdfQjzQ9bkp9m6HbH4sLp9l4txWttS20LsFwGlewTpHEzsZjQAnXqWfGnCHxXQ7
+            FdrvvrnSkHDdw3nWSEvBeX13mApfPtjZ+gL8Z32IvXO4xvKmgZqF5cfa/o0M4JDS lvCGkw0O8pN4sTRbhNKccEPPQ/oau288i7BGRKOHMx06zFKz1tb8PQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://termino.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://termino.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+      <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+      <md:GivenName>Michael</md:GivenName>
+      <md:SurName>FREITTER</md:SurName>
+      <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+      <md:GivenName>Oliver</md:GivenName>
+      <md:SurName>Petschk</md:SurName>
+      <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://stp.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+  <md:Extensions>
+    <mdrpi:RegistrationInfo registrationAuthority="MA14/AG-IZ" registrationInstant="2017-09-18T12:00:00Z">
+        <mdrpi:RegistrationPolicy xml:lang="de">https://www.test.portalverbund.gv.at/metadataupload.html</mdrpi:RegistrationPolicy>
+    </mdrpi:RegistrationInfo>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+          <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+          <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+          <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+          <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+          <mdui:UIInfo>
+              <mdui:DisplayName xml:lang="en">BKA Mitarbeiter (Extern)</mdui:DisplayName>
+              <mdui:Description xml:lang="en">BKA Mitarbeiterportal (externes Netzwerk)</mdui:Description>
+              <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+          </mdui:UIInfo>
+      </md:Extensions>
+      <md:KeyDescriptor>
+          <ds:KeyInfo>
+              <ds:X509Data>
+                  <ds:X509Certificate>
+                    MIIFxDCCBKygAwIBAgICArMwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMjAwODMyMTZaFw0xOTAxMDkwODMyMTZaMIGCMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxFzAVBgNVBAMTDnN0cC1ia2EtY2xpZW50MSMwIQYJKoZIhvcNAQkBFhR6ZXJ0aWZpa2F0QGJrYS5ndi5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkm2ShwW1dvQVXNKduQEE66WXcr8LbfdN7ejo6aWB/56hE0uPJOc1+B6UWfWm8lqFRVEDl6XdNFoLdNHKKbdU753spv20oeqbk0jKEyX4xSGVSuy20t796/kh8+OhVeHcZAAJvnNJwVdTqHyzjk2jHIjBAxxSMG3HLSYTknWJDX8jfYiWBxZvaeT0Dd/1HxmQloDB2hclyMXLvDrSymNVy/PtJxNotRINYIKX/5EFgl1Xw1YqcGJGJgCNkTBGQGpB+eyH+FnluYUoMuy/T61Zy9kI+Kays0zCiadRHVzlE3ut1czCsQpx2sKPoqZpy9oF0Q0ke8m+vdA6yeENh7ix8CAwEAAaOCAiowggImMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgXgMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUo8dDWs0URo6ysaTUTaFmSATKcy4wgdEGA1UdIwSByTCBxoAUph70XhpDtIjeosi9aGUDxTBvZtOhgaqkgacwgaQxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMQ0wCwYDVQQHEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRYwFAYDVQQDEw1Qb3J0YWxSb290LUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdIIBATAfBgNVHREEGDAWgRR6ZXJ0aWZpa2F0QGJrYS5ndi5hdDAiBgNVHRIEGzAZgRdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDBFBgNVHR8EPjA8MDqgOKA2hjRodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL1BvcnRhbFYuY3JsME8GCCsGAQUFBwEBBEMwQTA/BggrBgEFBQcwAoYzaHR0cDovL3BvcnRhbC5ibWkuZ3YuYXQvcmVmL3BraS9wb3J0YWxDQS9pbmRleC5odG1sMA4GByooAAoBAQEEAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAi9FS+u4uBRDgdM12E2uszYeKdC5dEZp6pVS4cx9QYCqPopkheFYwBEm+1xcqMx3Jww6Go+UrXErS4UAbTre8o7UHKvLNaAuggHYT1Gt6UVi4LYbXDyCmpGBZ0cXqCjiHRczqaiOxKpUKpC+QtMcX5hiUDwML3mGpaFV9ZdNgtIoIOvFUZVkAsAegEYF9xnNJs/erSjPoYX5OCpXbwl80hw8E1iebbs7yrAHrD67tj3OPGb6JQpbznqZzzvgHBh1yP9waBXa/Odugz3zm/YjA01oAb9xz+OwST2bHKFem/mymuTkhn7S4Vz6RSrku+/IB367IRtnfUqOmGQDfxdgEjg==
+                  </ds:X509Certificate>
+              </ds:X509Data>
+          </ds:KeyInfo>
+      </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+      <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+      <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+      <md:GivenName>Michael</md:GivenName>
+      <md:SurName>FREITTER</md:SurName>
+      <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+      <md:GivenName>Oliver</md:GivenName>
+      <md:SurName>Petschk</md:SurName>
+      <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://sp6.test.portalverbund.gv.at/sp">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+    <md:Extensions>
+      <DigestMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <SigningMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+      <SigningMethod xmlns="urn:oasis:names:tc:SAML:metadata:algsupport" Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">SP6 (Dev)</mdui:DisplayName>
+        <mdui:Description xml:lang="en">Drupal-Einbindung mit mod_shib (Dev)</mdui:Description>
+      </mdui:UIInfo>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIEQDCCAqigAwIBAgIJAI0Dq7+Vkk1MMA0GCSqGSIb3DQEBCwUAMCYxJDAiBgNV
+            BAMTG3NwLnRlc3QucG9ydGFsdmVyYnVuZC5ndi5hdDAeFw0xNzEyMDcxNTM3NTRa
+            Fw0yNzEyMDUxNTM3NTRaMCYxJDAiBgNVBAMTG3NwLnRlc3QucG9ydGFsdmVyYnVu
+            ZC5ndi5hdDCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALFEFiC3KULv
+            1VPn31xvxCPfsH3VUEEW0fb+jN4U7RioMuQfQ6kgM8dyjZREeBWDwynGVjZmz/2m
+            mgR13R78Tovx/pbyHO9ARFrtgDfF/QojOhfqqSjZRDSxmuX7gWhQao/nfxkSuEsi
+            /+NlZpJngMb27PxaXFv7YkFVWC7R5P3LaqKxauQDmlahp5BokyOBPBjb/WykmwN6
+            eVrz0Ny3aOdUMbDEFSMjWuiBYPAzocwOrhSWtcR5Haa32dDworH7X/dvci5Yj9sX
+            uqG5agCDJN2g/X4wrWyDh7ZJbDjfq43XFS0+uv8GdojSrpQrD/NMDCwvB3sDuvA3
+            MaHSnze1n1YVBNTu5C5Jq6diQuG6fxNVC8Z9TPmBcd9gpYUENyETu4x9l1pA7xm3
+            UZQRwr9fmez290NlE2QWsIB2aGk7NNMDXQXSpkk4QKmnFUGK3vARCX1WqtIb7Yln
+            vac9/eDshFNq22u2JANoYUKkw0vdf8l83SYEU/eYhpL0sktOILpKDwIDAQABo3Ew
+            bzBOBgNVHREERzBFghtzcC50ZXN0LnBvcnRhbHZlcmJ1bmQuZ3YuYXSGJmh0dHBz
+            Oi8vc3AudGVzdC5wb3J0YWx2ZXJidW5kLmd2LmF0L3NwMB0GA1UdDgQWBBSkadM/
+            18vaQcLpodLNfevkqzxg0TANBgkqhkiG9w0BAQsFAAOCAYEAlCnZWJG5g+TXlTSs
+            B/oDWTL0T77hvP4jVGhzzLUebJEv8G/gCuNRcIZJPJzvNlrqSsn4mRY7FQ7KrG50
+            dopsVkp8B/QiLyNBYRyRVicjGHGYKlNPoijweN7xh46YXHEYT0znXOs7pNn9Fnli
+            katpW4OgoBJGTpBlUPg4shVPMXZaA9h69heu5bkr1onqFKKp7vWB1gJGST1YT3KJ
+            rTD0z1Zh9Ffg055MSpYrEMjZPvhik+fmfSCTdahOoGYYdsELGI0uUNrl/fB7ESkx
+            Ndt3+geG/DhfV+OdtilbrXDBLVA1gNRAnG55u64vVPEEFtIRxNuhvwiOAL3n99Tl
+            kqoGxx1icYTJlOXYljK5q0slDMCeb5c6ArYkN57Sv9iyWnF/DAVFY1gpaSjyefxP
+            zxJVjCzlpAV5oBIWO745UVLUPh0viz5z2DcfBytzuqCzckMR9d5Cj4isWCl5+UjJ
+            UnzYaJtv0DKaJwE8FVu56P95903yu7ZLhE+s94L7HrOEl16a
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/SAML2/ECP" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp6.test.portalverbund.gv.at/Shibboleth.sso/SAML/POST" index="4"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">osAlliance</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.osalliance.com</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="support">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" entityID="https://sp4.test.portalverbund.gv.at/simplesaml">
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+        <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+        <mdui:UIInfo>
+          <mdui:DisplayName xml:lang="en">Termino Entwicklung</mdui:DisplayName>
+          <mdui:Description xml:lang="en">Termino/SSPHP Entwicklung PVP SSP PoC</mdui:Description>
+        </mdui:UIInfo>
+    </md:Extensions>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp4.test.portalverbund.gv.at/simplesaml/module.php/saml/sp/saml2-logout.php/default-sp"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp4.test.portalverbund.gv.at/simplesaml/module.php/saml/sp/saml2-acs.php/default-sp" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp4.test.portalverbund.gv.at/simplesaml/module.php/saml/sp/saml1-acs.php/default-sp" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp4.test.portalverbund.gv.at/simplesaml/module.php/saml/sp/saml2-acs.php/default-sp" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp4.test.portalverbund.gv.at/simplesaml/module.php/saml/sp/saml1-acs.php/default-sp/artifact" index="3"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">osAlliance (fuer BKA)</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.osalliance.com/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Rainer</md:GivenName>
+    <md:SurName>Hoerbe</md:SurName>
+    <md:EmailAddress>admin@identinetics.com</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:disco="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" entityID="https://idp5.test.portalverbund.gv.at/idp.xml">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      
+      <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512" MaxKeySize="4096" MinKeySize="2048"/>
+      
+      
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="de">AG-IZ PVP2 Testfederation IDP5</mdui:DisplayName>
+        <mdui:DisplayName xml:lang="en">AG-IZ PVP2 Testfederation IDP5</mdui:DisplayName>
+        <mdui:Description xml:lang="de">AG-IZ Testfederation simple Shibboleth IDP</mdui:Description>
+        <mdui:Logo height="70" width="79" xml:lang="en">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIUTMaFU3su5h9xBQJPalVsbOR7DBMwDQYJKoZIhvcNAQELBQAwKTEnMCUG
+A1UEAwweaWRwMS50ZXN0Lndwdi5wb3J0YWx2ZXJidW5kLmF0MB4XDTE2MDMwOTA5MjUwOVoXDTM2
+MDMwOTA5MjUwOVowKTEnMCUGA1UEAwweaWRwMS50ZXN0Lndwdi5wb3J0YWx2ZXJidW5kLmF0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6PRWhTPw8jDeIs0KNHxFe8vBTKgGJLtTBGz/
+I2qbHtvzQjDwy7l7t3VhC4bvCHU6q6LhprG1yblTs4mZOxNG3FgBSXfnlAz7LYaTksXGHLLrtcrf
+ODJggg+SDac6OaOLlN7HuvVIZMeGenQOL82av5FEB1SWl8YEnWx+jWBf4OiHGtUGqJ9FbFfvmMRU
+tBEil0xT53gBkNWcZ3T0IvRioVcCrr+mcoxHNH3JHuGmQ8xqZWZ27IoddTILEl5MXH9Kc5M3Pc/7
+5lXCDahQsqG1d40gzE3mEG2OmtlTb+FfJB4sXsH3y3pfO9hTNo/B7PfCv9wNdFk1moa8J2SLX/xC
+wwIDAQABo4GEMIGBMB0GA1UdDgQWBBQjGS9lXXW7CryQS/nTjb9mywvR8zBgBgNVHREEWTBXgh5p
+ZHAxLnRlc3Qud3B2LnBvcnRhbHZlcmJ1bmQuYXSGNWh0dHBzOi8vaWRwMS50ZXN0Lndwdi5wb3J0
+YWx2ZXJidW5kLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQDI0+RooeNeMr5l
+YOTE55kRFy8iWyx3szlsUw5qm27w8Mmu+lRBMPpwkDnDQ+TyUApOiU41i4EZXNwywEnwQGCFp8R4
+2Is2ECYqM6OIpW+Cf5HwsjwkeEj+Vr5o29mEAzzQFBVINF0FNPEV4xBdyRWI06E4B1FXW5zdn9sB
+8qIWwO3TpxvMQbQhvgQXva0OryhhmJ8qIaHqaR3owMZvu6lD7R7ei5z6NEgOlKcbp6K+B79nv8yz
+8DNvV303f9fn3V29TDVm8O5bvAFOND6uWGNOG1xQJMeyV8hZMDFWfjp4Q5y/P1JIa7WVwv8dSTuw
+HbehCp85eKIvxkaknQcJ1Ksh
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp5.test.portalverbund.gv.at/idp/profile/SAML2/Redirect/SLO"/>
+    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp5.test.portalverbund.gv.at/idp/profile/SAML2/POST/SSO"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp5.test.portalverbund.gv.at/idp/profile/SAML2/Redirect/SSO"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="de">PVP2 SAML Testfederation</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="de">AG-IZ Testumgebung f. PVP2 SAML</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="de">http://www.portalverbund.at</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Rainer</md:GivenName>
+    <md:SurName>Hoerbe</md:SurName>
+    <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+    <md:TelephoneNumber>+43 000 9999 0000</md:TelephoneNumber>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://stp.test.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">BKA Mitarbeiter (Test, extern)</mdui:DisplayName>
+                <mdui:DisplayName xml:lang="fr">BKA Employees (Test, external)</mdui:DisplayName>
+                <mdui:Description xml:lang="en">BKA Mitarbeiter Stammportal (Test, extern)</mdui:Description>
+                <mdui:Description xml:lang="fr">BKA Employees IDP (Test, external)</mdui:Description>
+                <mdui:Logo height="163" width="269" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIFyTCCBLGgAwIBAgICArIwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMTkxMDIxMTlaFw0xOTAxMDgxMDIxMTlaMIGHMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxHDAaBgNVBAMTE3N0cC10ZXN0LWJrYS1jbGllbnQxIzAhBgkqhkiG9w0BCQEWFHplcnRpZmlrYXRAYmthLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAubb6oNnpypw0tqeHqKJkHcqYanww8+Z2FVdw1TPtMEWOTiwEzRYtQm1OvlI5jo9Xbtfph4KxiForWH6kVHfBwJBZyFsmetxNgtcfaZaQRra33MRlCQrzk1GTiCvD3PCQZXQCyO74OCjDzvI7zD5KuLQ10B4qAj4Lp20vT3xN61WGe7a5NmDWQFjnDxr/QKZrZWI54Gb9JsOHWK9wRYF53d5p1MOsXX2nY2dVMFMxj1BO3r5bJR9KU4eYZdoi2XyHNQc8w9OiUEGttIMckN6shljP/5ivobt4xCFfQKZkD3UuIa3vJDs6XxXEgzJ334JZqJ4cY/+Wxgjfmfdr/O6O4QIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQ8oWDkqkFxRG42t8oCPS1sVTn1NDCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHplcnRpZmlrYXRAYmthLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCAUSJR7d7p6u4LlDRW+S0ARi7fcrWDgfAGug1c3gnw4U9oyD81lsOe8kWvuHxb0g2/yIHbrlDnpedAYyaIvDwgZvA8V/SHRPwKvQAHl3A2qHVn2pkO1eOiL+L7LtOyNK+wgXrMihXr34fZBLKvD22qQ4YlW0ipUP3PQB1WJDaXPcRsjFPKPxAspkXL4LqHKiF87ImfxwMRpxQBzagf62ME90Ezw8h41J4hcPpm22+ZIV5vRdZKwkYEIJwY1dlcLz2kK5bV084HnwJYEJdV8TbV5jypf5PVI9d8o4wY9wm/i98tXYHwLgSfxXDk6d2r1X8Y9EAuJRFTedAhlWRzrJXr</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.test.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.test.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.test.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.test.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">Bundeskanzlermat</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>Michael FREITTER</md:GivenName>
+        <md:SurName>FREITTER</md:SurName>
+        <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Oliver Petschk</md:GivenName>
+        <md:SurName>Petschk</md:SurName>
+        <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:disco="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" entityID="https://stp.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+      </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">BKA Mitarbeiter (Entwicklung, extern)</mdui:DisplayName>
+        <mdui:DisplayName xml:lang="fr">BKA Employees (Development, external)</mdui:DisplayName>
+        <mdui:Description xml:lang="en">BKA Mitarbeiter Stammportal (Entwicklung, extern)</mdui:Description>
+        <mdui:Description xml:lang="fr">BKA Employees IDP (Development, external)</mdui:Description>
+        <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIFyTCCBLGgAwIBAgICArQwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMjAwODMyMTZaFw0xOTAxMDkwODMyMTZaMIGHMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxHDAaBgNVBAMTE3N0cC1lbnR3LWJrYS1jbGllbnQxIzAhBgkqhkiG9w0BCQEWFHplcnRpZmlrYXRAYmthLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2kiq16MAcTM9F2OS9MdBtxzj2ggJjneec4Tof+oepDUdiNNGD1fH1YEOjgvbK8oskWgzmnaQ3QrWDkfiD3iuuzK+uyg7/zlHwrWefcK2pi/m2jAsjMvWdYCZOkh3h/wD7nh2JQwCxK/u+XqnuLZpGBDeLLj1+GY1P/qtKMYlsgfpY3cXYJ/woZOYnVa+Yb8MTHsMzjPpJWVL6ADEDHLSYUgxv/33H9HHaPQsMFjCz5nF+VRECA0nzVKwWpSuugZni9+7L5YTQDyT3MQKPyDqFfg1EPKmAWQtQO89u/grDESY6WK2QqWbbyFzbLxM3V27J+z8O0Wwl39rM/CT7Hr3dwIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBRgQDdBshOPiaK4TlMOsjvYmzM8SDCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHplcnRpZmlrYXRAYmthLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBmDddocZjCT2iC8lxmCptd1LKLhE/uUTLFd5BQIE2nvmF+qGpwOGIyKRXoIRvGN+f56Nnwp+aU3jv2N5hu9DhEinlf1ndCO2bHiTa6rKqrd69tScKcQi9zjGwnb9uv1NAGNT7JqUcyThwm0znzFYOB1wYBurh/dAeZbDxzJC6vKv6YOh/Yey1gCPfMF1FQgQT9AtCe1oMP4tt8uvURWRbm3krDhSl/y1H3tX5IBVvr9trJ4zJbbFMPgKKAWhDH4B4iBZ6lS6H/0jZ9TIk2DZclLHJ5/6unj88fpWr+6uA8+qwjSVR69FvGurprFs9QL06BR0D/4W5y+4QRROGYMaUB
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.entw.portal.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+    <md:GivenName>Michael FREITTER</md:GivenName>
+    <md:SurName>FREITTER</md:SurName>
+    <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Oliver Petschk</md:GivenName>
+    <md:SurName>Petschk</md:SurName>
+    <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://stp.entw.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+  <md:Extensions>
+    <mdrpi:RegistrationInfo registrationAuthority="MA14/AG-IZ" registrationInstant="2017-09-21T12:00:00Z">
+        <mdrpi:RegistrationPolicy xml:lang="de">https://www.test.portalverbund.gv.at/metadataupload.html</mdrpi:RegistrationPolicy>
+    </mdrpi:RegistrationInfo>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="de">BKA Mitarbeiter (Entwicklung)</mdui:DisplayName>
+                <mdui:DisplayName xml:lang="en">BKA Mitarbeiter (Entwicklung)</mdui:DisplayName>
+                <mdui:Description xml:lang="de">BKA Mitarbeiter Stammportal (Entwicklung, Intranet)</mdui:Description>
+                <mdui:Description xml:lang="en">BKA Mitarbeiter Stammportal (Entwicklung, Intranet)</mdui:Description>
+                <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIFyTCCBLGgAwIBAgICArQwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMjAwODMyMTZaFw0xOTAxMDkwODMyMTZaMIGHMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxHDAaBgNVBAMTE3N0cC1lbnR3LWJrYS1jbGllbnQxIzAhBgkqhkiG9w0BCQEWFHplcnRpZmlrYXRAYmthLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2kiq16MAcTM9F2OS9MdBtxzj2ggJjneec4Tof+oepDUdiNNGD1fH1YEOjgvbK8oskWgzmnaQ3QrWDkfiD3iuuzK+uyg7/zlHwrWefcK2pi/m2jAsjMvWdYCZOkh3h/wD7nh2JQwCxK/u+XqnuLZpGBDeLLj1+GY1P/qtKMYlsgfpY3cXYJ/woZOYnVa+Yb8MTHsMzjPpJWVL6ADEDHLSYUgxv/33H9HHaPQsMFjCz5nF+VRECA0nzVKwWpSuugZni9+7L5YTQDyT3MQKPyDqFfg1EPKmAWQtQO89u/grDESY6WK2QqWbbyFzbLxM3V27J+z8O0Wwl39rM/CT7Hr3dwIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBRgQDdBshOPiaK4TlMOsjvYmzM8SDCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHplcnRpZmlrYXRAYmthLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBmDddocZjCT2iC8lxmCptd1LKLhE/uUTLFd5BQIE2nvmF+qGpwOGIyKRXoIRvGN+f56Nnwp+aU3jv2N5hu9DhEinlf1ndCO2bHiTa6rKqrd69tScKcQi9zjGwnb9uv1NAGNT7JqUcyThwm0znzFYOB1wYBurh/dAeZbDxzJC6vKv6YOh/Yey1gCPfMF1FQgQT9AtCe1oMP4tt8uvURWRbm3krDhSl/y1H3tX5IBVvr9trJ4zJbbFMPgKKAWhDH4B4iBZ6lS6H/0jZ9TIk2DZclLHJ5/6unj88fpWr+6uA8+qwjSVR69FvGurprFs9QL06BR0D/4W5y+4QRROGYMaUB</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.entw.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.entw.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.entw.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.entw.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">Bundeskanzlermat</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>Michael FREITTER</md:GivenName>
+        <md:SurName>FREITTER</md:SurName>
+        <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Oliver Petschk</md:GivenName>
+        <md:SurName>Petschk</md:SurName>
+        <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://sp5.test.portalverbund.gv.at/sp.xml">
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512" MaxKeySize="4096" MinKeySize="2048"/>
+      
+      
+      <mdattr:EntityAttributes>
+        <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+       </saml:Attribute>
+      </mdattr:EntityAttributes>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">AGIZ Drupal Test</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            AGIZ PVP2 Testumgebung - Drupal
+        </mdui:Description>
+        <mdui:Logo height="70" width="79" xml:lang="en">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp5.portalverbund.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://testsp1.portalverbund.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>sp5.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=sp5.test.portalverbund.gv.at</ds:X509SubjectName>
+          <ds:X509Certificate>
+            MIIEQDCCAqigAwIBAgIJAI0Dq7+Vkk1MMA0GCSqGSIb3DQEBCwUAMCYxJDAiBgNV
+            BAMTG3NwLnRlc3QucG9ydGFsdmVyYnVuZC5ndi5hdDAeFw0xNzEyMDcxNTM3NTRa
+            Fw0yNzEyMDUxNTM3NTRaMCYxJDAiBgNVBAMTG3NwLnRlc3QucG9ydGFsdmVyYnVu
+            ZC5ndi5hdDCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALFEFiC3KULv
+            1VPn31xvxCPfsH3VUEEW0fb+jN4U7RioMuQfQ6kgM8dyjZREeBWDwynGVjZmz/2m
+            mgR13R78Tovx/pbyHO9ARFrtgDfF/QojOhfqqSjZRDSxmuX7gWhQao/nfxkSuEsi
+            /+NlZpJngMb27PxaXFv7YkFVWC7R5P3LaqKxauQDmlahp5BokyOBPBjb/WykmwN6
+            eVrz0Ny3aOdUMbDEFSMjWuiBYPAzocwOrhSWtcR5Haa32dDworH7X/dvci5Yj9sX
+            uqG5agCDJN2g/X4wrWyDh7ZJbDjfq43XFS0+uv8GdojSrpQrD/NMDCwvB3sDuvA3
+            MaHSnze1n1YVBNTu5C5Jq6diQuG6fxNVC8Z9TPmBcd9gpYUENyETu4x9l1pA7xm3
+            UZQRwr9fmez290NlE2QWsIB2aGk7NNMDXQXSpkk4QKmnFUGK3vARCX1WqtIb7Yln
+            vac9/eDshFNq22u2JANoYUKkw0vdf8l83SYEU/eYhpL0sktOILpKDwIDAQABo3Ew
+            bzBOBgNVHREERzBFghtzcC50ZXN0LnBvcnRhbHZlcmJ1bmQuZ3YuYXSGJmh0dHBz
+            Oi8vc3AudGVzdC5wb3J0YWx2ZXJidW5kLmd2LmF0L3NwMB0GA1UdDgQWBBSkadM/
+            18vaQcLpodLNfevkqzxg0TANBgkqhkiG9w0BAQsFAAOCAYEAlCnZWJG5g+TXlTSs
+            B/oDWTL0T77hvP4jVGhzzLUebJEv8G/gCuNRcIZJPJzvNlrqSsn4mRY7FQ7KrG50
+            dopsVkp8B/QiLyNBYRyRVicjGHGYKlNPoijweN7xh46YXHEYT0znXOs7pNn9Fnli
+            katpW4OgoBJGTpBlUPg4shVPMXZaA9h69heu5bkr1onqFKKp7vWB1gJGST1YT3KJ
+            rTD0z1Zh9Ffg055MSpYrEMjZPvhik+fmfSCTdahOoGYYdsELGI0uUNrl/fB7ESkx
+            Ndt3+geG/DhfV+OdtilbrXDBLVA1gNRAnG55u64vVPEEFtIRxNuhvwiOAL3n99Tl
+            kqoGxx1icYTJlOXYljK5q0slDMCeb5c6ArYkN57Sv9iyWnF/DAVFY1gpaSjyefxP
+            zxJVjCzlpAV5oBIWO745UVLUPh0viz5z2DcfBytzuqCzckMR9d5Cj4isWCl5+UjJ
+            UnzYaJtv0DKaJwE8FVu56P95903yu7ZLhE+s94L7HrOEl16a
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>      
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp5.test.portalverbund.gv.at/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp5.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp5.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="0"/>
+   </md:SPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="de">AG-IZ PVP2 Testfederation</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="de">AG-IZ PVP2 SAML Test Federation</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="de">http://www.portalverbund.at</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Rainer</md:GivenName>
+        <md:SurName>Hoerbe</md:SurName>
+        <md:EmailAddress>rainer@hoerbe.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 000 9999 0000</md:TelephoneNumber>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>Rainer</md:GivenName>
+        <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 000 9999 0000</md:TelephoneNumber>
+    </md:ContactPerson>
+ </md:EntityDescriptor><md:EntityDescriptor entityID="https://vsp.tirol.gv.at/sp/crowd">
+  <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="de">V-Crowd</mdui:DisplayName>
+        <mdui:Description xml:lang="de">
+          Atlassian Crowd V-Stage https://vsp.tirol.local/sp/crowd
+        </mdui:Description>
+      </mdui:UIInfo>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/Login"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo>
+        <ds:KeyName>vsp.tirol.gv.at-sp-crowd</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>
+            C=AT,ST=Tirol,L=Innsbruck,O=DVT - Daten-Verarbeitung-Tirol GmbH,OU=Rechenzentrum,CN=vsp.tirol.gv.at-sp-crowd
+          </ds:X509SubjectName>
+          <ds:X509Certificate>
+            MIIGYTCCBEmgAwIBAgIIK7KnoYp0F1IwDQYJKoZIhvcNAQELBQAwgbAxHjAcBgkq hkiG9w0BCQEWD3BraUB0aXJvbC5ndi5hdDEXMBUGA1UEAwwORFZUVExSU0VTRUNB
+            RzIxFjAUBgNVBAsMDVJlY2hlbnplbnRydW0xLDAqBgNVBAoMI0RWVCAtIERhdGVu LVZlcmFyYmVpdHVuZy1UaXJvbCBHbWJIMRIwEAYDVQQHDAlJbm5zYnJ1Y2sxDjAM
+            BgNVBAgMBVRpcm9sMQswCQYDVQQGEwJBVDAeFw0xNjA2MDcxMDQ4MDBaFw0yMTA2 MDcxMDQ4MDBaMIGaMSEwHwYDVQQDDBh2c3AudGlyb2wuZ3YuYXQtc3AtY3Jvd2Qx
+            FjAUBgNVBAsMDVJlY2hlbnplbnRydW0xLDAqBgNVBAoMI0RWVCAtIERhdGVuLVZl cmFyYmVpdHVuZy1UaXJvbCBHbWJIMRIwEAYDVQQHDAlJbm5zYnJ1Y2sxDjAMBgNV
+            BAgMBVRpcm9sMQswCQYDVQQGEwJBVDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC AQoCggEBALIVOj/ltckh6y+8vVTM6Cv57nIHVeq8gMRXIE95gkIvOuWEtUQLUIF5
+            /IkdbV+j+whGYPu5YeCtxCdJgHrKhTR+LVmQYqRnMte36lyTuatRBTnKQnWaUHcm cAG1tHNeY2t0tfU8gUngHEN0hJUXHwRhlnN92a81lUULKLGZYOyhpWcG/09c/Prq
+            IvWOz69MIl1NPGapS6b8ZYitBiXBPyq4K30gQ66XG0v3noT8ICHIrJlrRFzzkaBc TEeKjsDO6EKYhEtmlYP9XdIImxnHmBeb6htl/LFEhPcWaY9Rb910z1i4tTgouAS0
+            FigTA90WH84wG44eva9T0YlGty1O3WcCAwEAAaOCAZEwggGNMEwGCCsGAQUFBwEB BEAwPjA8BggrBgEFBQcwAoYwaHR0cDovL3BraS50aXJvbC5ndi5hdC9wdWJsaWMv
+            ZHZ0dGxyc2VzZWNhZzIuY3J0MB0GA1UdDgQWBBQhJAQkGclCfeAyPsIybp4x/p7T 0jAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFI6POmxkwtNLcAdGmdfn3sJ2uo0H
+            MD8GA1UdLgQ4MDYwNKAyoDCGLmh0dHA6Ly9wa2kudGlyb2wuZ3YuYXQvY2RwL2R2 dHRscnNlc2VjYWcyKy5jcmwwRgYDVR0gBD8wPTA7BgwrBgEEAYKxcAEBCgEwKzAp
+            BggrBgEFBQcCARYdaHR0cDovL3BraS50aXJvbC5ndi5hdC9wb2xpY3kwPgYDVR0f BDcwNTAzoDGgL4YtaHR0cDovL3BraS50aXJvbC5ndi5hdC9jZHAvZHZ0dGxyc2Vz
+            ZWNhZzIuY3JsMA4GA1UdDwEB/wQEAwIFoDAWBgNVHSUBAf8EDDAKBggrBgEFBQcD ATANBgkqhkiG9w0BAQsFAAOCAgEAd0xZQa9/IXzEkeyBVvNStB7GlRtDXxiyKfLD
+            X79HuB6/3XCyDYrmqz4cgCSyvLMrDIR0K72/y48zCXW6tWEMkyum1CVO7o1V6qmR qI3eQUVNN0tFd6FdNroOhbG8CfhvMn1AYg5FtcEabvvaE4Qk6aEjLkpIR1sPjpTI
+            yhFWlgiRwbeeuR/pk07CJRsxV6jsK5EU3pOkquDlKT7OVIJB4wCA4AqREXk+FsUC 7Z6pf/uAiCex9qHLYgov5ZnEJY86ZGDdNCGm+xAsjJQOmSv8DCjvL/aMOlQ2WXia
+            C5JyfeznMfAvUjIenOAg9IdXrDmoLouuDPrVNG7dbu9jVjk6OrKxMVZVsAkrxm4i sEqXtpzMussUYPlobkDcVowNWO3V3d9yGs9gLuimynesdJSYiBlgZDjD3BwwfYs7
+            vXcNRCYgratQedwSoAtUMhOH1Tpj5vI4F4yPsSE9qBM/FSbNqnqe7E4dUiWw6+75 AhLcBcLon1jrb8sz2ugrYg0R+vWbuHw2x6sKKgC80DNEe88XDth7k/BhDFx6dFUU
+            YhiUN1EL9V/Drt7fDSeObgwUzkAFjoIha3Y/hSxHPoZgTXuHFKika4pxlyeiiK5v 2992judXcqnZVrMVQwF71bB5NuErWBKVXK9Xrffh9CK9PudpVI8CpzYmu0grqH5v 1Q/U7+Y=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://vsp.tirol.gv.at/crowd/plugins/servlet/ssocookie/Shibboleth.sso/SAML2/ECP" index="4"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="de">Land Tirol</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="de">Land Tirol</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="de">http://www.tirol.gv.at</md:OrganizationURL>
+  </md:Organization>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://sp7.test.portalverbund.gv.at/sp.xml">
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512" MaxKeySize="4096" MinKeySize="2048"/>  
+      <mdattr:EntityAttributes>
+        <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+       </saml:Attribute>
+      </mdattr:EntityAttributes>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">AGIZ Echo Service/SP7</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            AGIZ PVP2 Testumgebung - Echo Service (Dev copy SP6)
+        </mdui:Description>
+        <mdui:Logo height="70" width="79" xml:lang="en">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp7portalverbund.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://testsp1.portalverbund.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>sp7.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=sp7.test.portalverbund.gv.at</ds:X509SubjectName>
+          <ds:X509Certificate>
+            MIIGfzCCBWegAwIBAgIDDUofMA0GCSqGSIb3DQEBBQUAMIGMMQswCQYDVQQGEwJJ
+            TDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0
+            YWwgQ2VydGlmaWNhdGUgU2lnbmluZzE4MDYGA1UEAxMvU3RhcnRDb20gQ2xhc3Mg
+            MSBQcmltYXJ5IEludGVybWVkaWF0ZSBTZXJ2ZXIgQ0EwHhcNMTMxMjA1MjA0NjM1
+            WhcNMTQxMjA2MTMzNzM0WjB9MRkwFwYDVQQNExBxYVA3a2hnS1MxaDZycmNXMQsw
+            CQYDVQQGEwJBVDElMCMGA1UEAxMcc3A1LnRlc3QucG9ydGFsdmVyYnVuZC5ndi5h
+            dDEsMCoGCSqGSIb3DQEJARYdd2VibWFzdGVyQHBvcnRhbHZlcmJ1bmQuZ3YuYXQw
+            ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYmxA+CB7zxxRw4s7T3YPF
+            UA5S+eFDrPfwkYGgRcpcp9rEfBccxrgLQbbxQEopemDC0Dv6ewKwwGCWZm9PL+y7
+            qR2BHV/ri5Dz9GAzQMima6P9feVnZjQlKvP4EWBnQ8N960JHCAYw06fFY91KsX+p
+            pkaG3p+dH6uToGGdrD5anP6rY3SFrChPQP9XwevYoukhQ/XWw0qihAZKGFrmW0Gx
+            dQIE0QCOZUStR21w8HskH598Hp7K+osEpukOjQ1CkS5oMkwbSuAbX1UT4H8rYUIt
+            10BcAvBxjwQgtq23UImWrZPaHqFhJmg4fcTgGC3/vEVFvoNf/kY7AnPSlqXMJLVX
+            AgMBAAGjggL2MIIC8jAJBgNVHRMEAjAAMAsGA1UdDwQEAwIDqDATBgNVHSUEDDAK
+            BggrBgEFBQcDATAdBgNVHQ4EFgQUKY1tlZ9hq/ZcbQHs9c/W8iGMSMkwHwYDVR0j
+            BBgwFoAU60I00Jiwq5/0G2sI98xkLu8OLEUwPAYDVR0RBDUwM4Icc3A1LnRlc3Qu
+            cG9ydGFsdmVyYnVuZC5ndi5hdIITcG9ydGFsdmVyYnVuZC5ndi5hdDCCAVYGA1Ud
+            IASCAU0wggFJMAgGBmeBDAECATCCATsGCysGAQQBgbU3AQIDMIIBKjAuBggrBgEF
+            BQcCARYiaHR0cDovL3d3dy5zdGFydHNzbC5jb20vcG9saWN5LnBkZjCB9wYIKwYB
+            BQUHAgIwgeowJxYgU3RhcnRDb20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwAwIB
+            ARqBvlRoaXMgY2VydGlmaWNhdGUgd2FzIGlzc3VlZCBhY2NvcmRpbmcgdG8gdGhl
+            IENsYXNzIDEgVmFsaWRhdGlvbiByZXF1aXJlbWVudHMgb2YgdGhlIFN0YXJ0Q29t
+            IENBIHBvbGljeSwgcmVsaWFuY2Ugb25seSBmb3IgdGhlIGludGVuZGVkIHB1cnBv
+            c2UgaW4gY29tcGxpYW5jZSBvZiB0aGUgcmVseWluZyBwYXJ0eSBvYmxpZ2F0aW9u
+            cy4wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5zdGFydHNzbC5jb20vY3J0
+            MS1jcmwuY3JsMIGOBggrBgEFBQcBAQSBgTB/MDkGCCsGAQUFBzABhi1odHRwOi8v
+            b2NzcC5zdGFydHNzbC5jb20vc3ViL2NsYXNzMS9zZXJ2ZXIvY2EwQgYIKwYBBQUH
+            MAKGNmh0dHA6Ly9haWEuc3RhcnRzc2wuY29tL2NlcnRzL3N1Yi5jbGFzczEuc2Vy
+            dmVyLmNhLmNydDAjBgNVHRIEHDAahhhodHRwOi8vd3d3LnN0YXJ0c3NsLmNvbS8w
+            DQYJKoZIhvcNAQEFBQADggEBAKFqnYBTXxyh59GwbNrLJwXfjaGnOzIko9dyOaJs
+            QLJ0l++G1/Fqe1ZBWrP5Rg1Wf7pKtOeliZuH/L3Fvn/XKYeMB/ajkzqsEFa9w7+F
+            a5hDV+wcQTV9GP6Tu+ykQcFGfq+4qMp76JS9QrblK78o1yJA02sLAEcuTYWq6rov
+            5ZEZC246Bt5HBqlAWaRgDMrrdp9cH+agDD9erH0HOpKB7000NIj8/pan/FXvGpTR
+            r27mCZZHPnVOa6nDqf43Dh8iN8AU8Jy1mlkHSLuXKQSGWhRMl8A8UW+K2zVSi+CP
+            YKOGStIwVBSY+ZV7bcwdF0Rd847zXJkCYI8Je9gbKgVRJ8c=
+            
+		  </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>      
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp7.test.portalverbund.gv.at/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp7.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp7.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="0"/>
+   </md:SPSSODescriptor>
+    <md:Organization>
+      <md:OrganizationName xml:lang="en">osAlliance</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="en">osAlliance</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="en">https://www.osalliance.com</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Rainer</md:GivenName>
+        <md:SurName>Hoerbe</md:SurName>
+        <md:EmailAddress>rainer@hoerbe.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 000 9999 0000</md:TelephoneNumber>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>Rainer</md:GivenName>
+        <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 000 9999 0000</md:TelephoneNumber>
+    </md:ContactPerson>
+ </md:EntityDescriptor><md:EntityDescriptor entityID="https://stp.test.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+            <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+            <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="de">BKA Mitarbeiter (Test)</mdui:DisplayName>
+                <mdui:DisplayName xml:lang="en">BKA Employees (Test)</mdui:DisplayName>
+                <mdui:Description xml:lang="de">BKA Mitarbeiter Stammportal (Test, Intranet)</mdui:Description>
+                <mdui:Description xml:lang="en">BKA Employees IDP (Test, Intranet)</mdui:Description>
+                <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        MIIFyTCCBLGgAwIBAgICArIwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMTkxMDIxMTlaFw0xOTAxMDgxMDIxMTlaMIGHMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxHDAaBgNVBAMTE3N0cC10ZXN0LWJrYS1jbGllbnQxIzAhBgkqhkiG9w0BCQEWFHplcnRpZmlrYXRAYmthLmd2LmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAubb6oNnpypw0tqeHqKJkHcqYanww8+Z2FVdw1TPtMEWOTiwEzRYtQm1OvlI5jo9Xbtfph4KxiForWH6kVHfBwJBZyFsmetxNgtcfaZaQRra33MRlCQrzk1GTiCvD3PCQZXQCyO74OCjDzvI7zD5KuLQ10B4qAj4Lp20vT3xN61WGe7a5NmDWQFjnDxr/QKZrZWI54Gb9JsOHWK9wRYF53d5p1MOsXX2nY2dVMFMxj1BO3r5bJR9KU4eYZdoi2XyHNQc8w9OiUEGttIMckN6shljP/5ivobt4xCFfQKZkD3UuIa3vJDs6XxXEgzJ334JZqJ4cY/+Wxgjfmfdr/O6O4QIDAQABo4ICKjCCAiYwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQ8oWDkqkFxRG42t8oCPS1sVTn1NDCB0QYDVR0jBIHJMIHGgBSmHvReGkO0iN6iyL1oZQPFMG9m06GBqqSBpzCBpDELMAkGA1UEBhMCQVQxDTALBgNVBAgTBFdpZW4xDTALBgNVBAcTBFdpZW4xJzAlBgNVBAoTHkJ1bmRlc21pbmlzdGVyaXVtIGZ1ZXIgSW5uZXJlczEOMAwGA1UECxMFSVQtTVMxFjAUBgNVBAMTDVBvcnRhbFJvb3QtQ0ExJjAkBgkqhkiG9w0BCQEWF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0ggEBMB8GA1UdEQQYMBaBFHplcnRpZmlrYXRAYmthLmd2LmF0MCIGA1UdEgQbMBmBF2JtaS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9wb3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCAUSJR7d7p6u4LlDRW+S0ARi7fcrWDgfAGug1c3gnw4U9oyD81lsOe8kWvuHxb0g2/yIHbrlDnpedAYyaIvDwgZvA8V/SHRPwKvQAHl3A2qHVn2pkO1eOiL+L7LtOyNK+wgXrMihXr34fZBLKvD22qQ4YlW0ipUP3PQB1WJDaXPcRsjFPKPxAspkXL4LqHKiF87ImfxwMRpxQBzagf62ME90Ezw8h41J4hcPpm22+ZIV5vRdZKwkYEIJwY1dlcLz2kK5bV084HnwJYEJdV8TbV5jypf5PVI9d8o4wY9wm/i98tXYHwLgSfxXDk6d2r1X8Y9EAuJRFTedAhlWRzrJXr</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.test.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.test.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.test.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.test.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">https://www.bka.gv.at/</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+        <md:Company>Bundeskanzleramt</md:Company>
+        <md:GivenName>Hotline</md:GivenName>
+        <md:EmailAddress>mailto:hotline@bka.gv.at</md:EmailAddress>
+        <md:TelephoneNumber>+43 1 531 15-202777</md:TelephoneNumber>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Oliver Petschk</md:GivenName>
+        <md:SurName>Petschk</md:SurName>
+        <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:pvzd="http://egov.gv.at/pvzd1.xsd" entityID="https://portal.stmk.gv.at/stdportal-sp/portalverbund.gv.at">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+           <ds:X509Certificate>
+MIIF7TCCBNWgAwIBAgICAnswDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFU
+MQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVy
+IElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5k
+LUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0x
+NjAyMTEwNzMyMThaFw0xODAzMDIwNzMyMThaMIGqMQswCQYDVQQGEwJBVDETMBEG
+A1UECAwKU3RlaWVybWFyazE0MDIGA1UECgwrQW10IGRlciBTdGVpZXJtw4PCpHJr
+aXNjaGVuIExhbmRlc3JlZ2llcnVuZzEOMAwGA1UECwwFQUJUMDExGjAYBgNVBAMM
+EXBvcnRhbC5zdG1rLmd2LmF0MSQwIgYJKoZIhvcNAQkBFhVBYnRlaWx1bmcxQHN0
+bWsuZ3YuYXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8Gfz8jT9K
+GC906wn4rcc7/Yl9CTtAeHwJR1Vgqjc34K7CGWes7GHIlB/60aZ1CRnFJK9cxjN0
+Wfp8N1NIBbvHr5riA4QhxL5yHQvexDfeR8d1d9YGaez3OQZa5aB5dbvyKrm8l+/u
+um3zhMyOgvDKdbiTpqoGtBJUw5tPdr+wM72F5uEDDhKJYxJiKvYuVY6Ws386jn/5
+J6jODAOyqjqnwkmvW/xtf2mhBWdRzmtPbpT+RigHSjip1FYyOjE1f8lZqfpjn1pv
+nvrE6X7g9sDiLNh35TnCwzKA31PIvw76SL+HgB+0du9VUuM7p8MMo8V7AqLjeQKF
+GC2VORwIuRLxAgMBAAGjggIrMIICJzAJBgNVHRMEAjAAMAsGA1UdDwQEAwIF4DAs
+BglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYD
+VR0OBBYEFCyBo1+fM3umPmBnW0TrHP4LD8yQMIHRBgNVHSMEgckwgcaAFKYe9F4a
+Q7SI3qLIvWhlA8Uwb2bToYGqpIGnMIGkMQswCQYDVQQGEwJBVDENMAsGA1UECBME
+V2llbjENMAsGA1UEBxMEV2llbjEnMCUGA1UEChMeQnVuZGVzbWluaXN0ZXJpdW0g
+ZnVlciBJbm5lcmVzMQ4wDAYDVQQLEwVJVC1NUzEWMBQGA1UEAxMNUG9ydGFsUm9v
+dC1DQTEmMCQGCSqGSIb3DQEJARYXYm1pLWl2LTItZS1jYUBibWkuZ3YuYXSCAQEw
+IAYDVR0RBBkwF4EVQWJ0ZWlsdW5nMUBzdG1rLmd2LmF0MCIGA1UdEgQbMBmBF2Jt
+aS1pdi0yLWUtY2FAYm1pLmd2LmF0MEUGA1UdHwQ+MDwwOqA4oDaGNGh0dHA6Ly9w
+b3J0YWwuYm1pLmd2LmF0L3JlZi9wa2kvcG9ydGFsQ0EvUG9ydGFsVi5jcmwwTwYI
+KwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vcG9ydGFsLmJtaS5ndi5h
+dC9yZWYvcGtpL3BvcnRhbENBL2luZGV4Lmh0bWwwDgYHKigACgEBAQQDAQH/MA0G
+CSqGSIb3DQEBCwUAA4IBAQAOAzauCvJsUJCiewadyxrObNrtGT1d5IxgcFrEyRNg
+Pk/ZUWbajXIdmloPSjOIAK2Lq2SA6bPxEtFKNQcg5axlGsiOI+RVKgZ/lK9r6ZKQ
+YsqF5VgpCzNe4WyN9Yw8DMIY84XQglAFDVroFSHZkLt8ceG2rrF3Fr0+cRBz0e0k
+B11Nn+Da51YPQKUztvFdlXq6JzpViXoR4Rv51K8o8h5qU8FbQsIz3byrGHu/hyOZ
+LpM5Jk2OP1Cz+71UN5wUHbmr9kgeGdGg3QWUqRlFvKdWdgObEBqJSn+DGBpGxvUN
+c0WUHPoewPJX2pdE8HuxxMse+6U6Gx0MHDwRJaGmOtE2
+
+           </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portal.stmk.gv.at/stdportal-sp/portalverbund.gv.at/idp/unused"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor><md:EntityDescriptor entityID="https://stp.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at">
+  <md:Extensions>
+    <mdrpi:RegistrationInfo registrationAuthority="MA14/AG-IZ" registrationInstant="2017-09-18T12:00:00Z">
+        <mdrpi:RegistrationPolicy xml:lang="de">https://www.test.portalverbund.gv.at/metadataupload.html</mdrpi:RegistrationPolicy>
+    </mdrpi:RegistrationInfo>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+        <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256" MaxKeySize="511" MinKeySize="256"/>
+        <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" MaxKeySize="4096" MinKeySize="2048"/>
+        <mdui:UIInfo>
+            <mdui:DisplayName xml:lang="en">BKA Mitarbeiter </mdui:DisplayName>
+            <mdui:Description xml:lang="en">BKA Mitarbeiterportal (Intranet) </mdui:Description>
+            <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+        </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor>
+        <ds:KeyInfo>
+            <ds:X509Data>
+                <ds:X509Certificate>MIIFxDCCBKygAwIBAgICArMwDQYJKoZIhvcNAQELBQAwgZgxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRkwFwYDVQQDExBQb3J0YWx2ZXJidW5kLUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDAeFw0xNjEyMjAwODMyMTZaFw0xOTAxMDkwODMyMTZaMIGCMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2llbjEZMBcGA1UEChMQQnVuZGVza2FuemxlcmFtdDELMAkGA1UECxMCSVQxFzAVBgNVBAMTDnN0cC1ia2EtY2xpZW50MSMwIQYJKoZIhvcNAQkBFhR6ZXJ0aWZpa2F0QGJrYS5ndi5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkm2ShwW1dvQVXNKduQEE66WXcr8LbfdN7ejo6aWB/56hE0uPJOc1+B6UWfWm8lqFRVEDl6XdNFoLdNHKKbdU753spv20oeqbk0jKEyX4xSGVSuy20t796/kh8+OhVeHcZAAJvnNJwVdTqHyzjk2jHIjBAxxSMG3HLSYTknWJDX8jfYiWBxZvaeT0Dd/1HxmQloDB2hclyMXLvDrSymNVy/PtJxNotRINYIKX/5EFgl1Xw1YqcGJGJgCNkTBGQGpB+eyH+FnluYUoMuy/T61Zy9kI+Kays0zCiadRHVzlE3ut1czCsQpx2sKPoqZpy9oF0Q0ke8m+vdA6yeENh7ix8CAwEAAaOCAiowggImMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgXgMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUo8dDWs0URo6ysaTUTaFmSATKcy4wgdEGA1UdIwSByTCBxoAUph70XhpDtIjeosi9aGUDxTBvZtOhgaqkgacwgaQxCzAJBgNVBAYTAkFUMQ0wCwYDVQQIEwRXaWVuMQ0wCwYDVQQHEwRXaWVuMScwJQYDVQQKEx5CdW5kZXNtaW5pc3Rlcml1bSBmdWVyIElubmVyZXMxDjAMBgNVBAsTBUlULU1TMRYwFAYDVQQDEw1Qb3J0YWxSb290LUNBMSYwJAYJKoZIhvcNAQkBFhdibWktaXYtMi1lLWNhQGJtaS5ndi5hdIIBATAfBgNVHREEGDAWgRR6ZXJ0aWZpa2F0QGJrYS5ndi5hdDAiBgNVHRIEGzAZgRdibWktaXYtMi1lLWNhQGJtaS5ndi5hdDBFBgNVHR8EPjA8MDqgOKA2hjRodHRwOi8vcG9ydGFsLmJtaS5ndi5hdC9yZWYvcGtpL3BvcnRhbENBL1BvcnRhbFYuY3JsME8GCCsGAQUFBwEBBEMwQTA/BggrBgEFBQcwAoYzaHR0cDovL3BvcnRhbC5ibWkuZ3YuYXQvcmVmL3BraS9wb3J0YWxDQS9pbmRleC5odG1sMA4GByooAAoBAQEEAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAi9FS+u4uBRDgdM12E2uszYeKdC5dEZp6pVS4cx9QYCqPopkheFYwBEm+1xcqMx3Jww6Go+UrXErS4UAbTre8o7UHKvLNaAuggHYT1Gt6UVi4LYbXDyCmpGBZ0cXqCjiHRczqaiOxKpUKpC+QtMcX5hiUDwML3mGpaFV9ZdNgtIoIOvFUZVkAsAegEYF9xnNJs/erSjPoYX5OCpXbwl80hw8E1iebbs7yrAHrD67tj3OPGb6JQpbznqZzzvgHBh1yP9waBXa/Odugz3zm/YjA01oAb9xz+OwST2bHKFem/mymuTkhn7S4Vz6RSrku+/IB367IRtnfUqOmGQDfxdgEjg==</ds:X509Certificate>
+            </ds:X509Data>
+        </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO" ResponseLocation="https://stp.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SLO"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stp.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/POST/SSO"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stp.portal.intern.bka.gv.at/stdportal-idp/portalverbund.gv.at/profile/SAML2/Redirect/SSO"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+      <md:OrganizationName xml:lang="en">BKA</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="en">Bundeskanzleramt</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="en">https://www.bka.gv.at</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+      <md:GivenName>Michael FREITTER</md:GivenName>
+      <md:SurName>FREITTER</md:SurName>
+      <md:EmailAddress>michael.freitter@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+      <md:GivenName>Oliver Petschk</md:GivenName>
+      <md:SurName>Petschk</md:SurName>
+      <md:EmailAddress>oliver.petschk@bka.gv.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://termino.indigofloat.at/simplesaml/module.php/saml/sp/metadata.php/pvp-test">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+        <saml:AttributeValue xsi:type="xs:string">http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken
+        </saml:AttributeValue>
+      </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://termino.indigofloat.at/saml_login"/>
+      <idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://termino.indigofloat.at/saml_login" index="1"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">Termino SAML</mdui:DisplayName>
+        <mdui:DisplayName xml:lang="de">Termino SAML</mdui:DisplayName>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIFJTCCBA2gAwIBAgISA1XJcLUzVESrXNdvif73GtdbMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xNzAxMDMwNTQyMDBaFw0xNzA0MDMwNTQyMDBaMCExHzAdBgNVBAMTFnRlcm1pbm8uaW5kaWdvZmxvYXQuYXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDwmcOmqErdZvMB9c0t2jN+9eR1HGdp4YiDUJY3Q4bnsZiDkTfoSRceNmFwhh+lXWMOTJMPM1bGGm26LlZXO1t7xz69Oy1FxtnBinC8xGtKF6wgJcP6cB1UZODtgNG9XMwigoAKhzAM3qP8mdM0grQ6DHglYdizMqQoqZIunB9J8/Ht6GeFjPzC/30DBRaj+wIJTIgz7ZsEN63ZohjUTFmqcfIggqui/Mz69tEjKG/c9N58MJciEUKtX5X54xr7A/By9c7BSL6AhxHfeYcoXJj27pgnqQGg3AfzGBI0dFHVLSKXBQQobvO/Ydf8XA0JT0706t1lfMV7tRcyYX8shLm5AgMBAAGjggIsMIICKDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFsCR63AMGA9T+mRmbeG1ZwQrg4/MB8GA1UdIwQYMBaAFKhKamMEfd265tE5t6ZFZe/zqOyhMHAGCCsGAQUFBwEBBGQwYjAvBggrBgEFBQcwAYYjaHR0cDovL29jc3AuaW50LXgzLmxldHNlbmNyeXB0Lm9yZy8wLwYIKwYBBQUHMAKGI2h0dHA6Ly9jZXJ0LmludC14My5sZXRzZW5jcnlwdC5vcmcvMDYGA1UdEQQvMC2CE3NhbWwuaW5kaWdvZmxvYXQuYXSCFnRlcm1pbm8uaW5kaWdvZmxvYXQuYXQwgf4GA1UdIASB9jCB8zAIBgZngQwBAgEwgeYGCysGAQQBgt8TAQEBMIHWMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCBqwYIKwYBBQUHAgIwgZ4MgZtUaGlzIENlcnRpZmljYXRlIG1heSBvbmx5IGJlIHJlbGllZCB1cG9uIGJ5IFJlbHlpbmcgUGFydGllcyBhbmQgb25seSBpbiBhY2NvcmRhbmNlIHdpdGggdGhlIENlcnRpZmljYXRlIFBvbGljeSBmb3VuZCBhdCBodHRwczovL2xldHNlbmNyeXB0Lm9yZy9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEABI7w4oX5Vo9A+UZlyVJPQX3FWoO536rJxNafQUmpkh/x/eiKEF4dMokY4JLek2XpeV+dIVGr8OTl6uOc11JW6nONI0xzAKcCunmiU94fnE5fSXyS4VWwO6T1aBF7brIoEG0An0l0NPoUjmTTeYTbcfxreOIPHsD7JaEY+DwbeHamTkdGgwjJHCiiALholinRQNwkcO6buDFsE0hhI8BJg9iig/NjE5WeNHCziaht+9WMI/lR82enTQWFBioiIkvXivWr8413mmdT38KlGD8bIYjnHgoa5lqO+RwBfaguIq+cEn7HJX9NEBHQhc6Qtg8iDVufhrJa1qG+7PyKhdjIUQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIIFJTCCBA2gAwIBAgISA1XJcLUzVESrXNdvif73GtdbMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xNzAxMDMwNTQyMDBaFw0xNzA0MDMwNTQyMDBaMCExHzAdBgNVBAMTFnRlcm1pbm8uaW5kaWdvZmxvYXQuYXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDwmcOmqErdZvMB9c0t2jN+9eR1HGdp4YiDUJY3Q4bnsZiDkTfoSRceNmFwhh+lXWMOTJMPM1bGGm26LlZXO1t7xz69Oy1FxtnBinC8xGtKF6wgJcP6cB1UZODtgNG9XMwigoAKhzAM3qP8mdM0grQ6DHglYdizMqQoqZIunB9J8/Ht6GeFjPzC/30DBRaj+wIJTIgz7ZsEN63ZohjUTFmqcfIggqui/Mz69tEjKG/c9N58MJciEUKtX5X54xr7A/By9c7BSL6AhxHfeYcoXJj27pgnqQGg3AfzGBI0dFHVLSKXBQQobvO/Ydf8XA0JT0706t1lfMV7tRcyYX8shLm5AgMBAAGjggIsMIICKDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFsCR63AMGA9T+mRmbeG1ZwQrg4/MB8GA1UdIwQYMBaAFKhKamMEfd265tE5t6ZFZe/zqOyhMHAGCCsGAQUFBwEBBGQwYjAvBggrBgEFBQcwAYYjaHR0cDovL29jc3AuaW50LXgzLmxldHNlbmNyeXB0Lm9yZy8wLwYIKwYBBQUHMAKGI2h0dHA6Ly9jZXJ0LmludC14My5sZXRzZW5jcnlwdC5vcmcvMDYGA1UdEQQvMC2CE3NhbWwuaW5kaWdvZmxvYXQuYXSCFnRlcm1pbm8uaW5kaWdvZmxvYXQuYXQwgf4GA1UdIASB9jCB8zAIBgZngQwBAgEwgeYGCysGAQQBgt8TAQEBMIHWMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCBqwYIKwYBBQUHAgIwgZ4MgZtUaGlzIENlcnRpZmljYXRlIG1heSBvbmx5IGJlIHJlbGllZCB1cG9uIGJ5IFJlbHlpbmcgUGFydGllcyBhbmQgb25seSBpbiBhY2NvcmRhbmNlIHdpdGggdGhlIENlcnRpZmljYXRlIFBvbGljeSBmb3VuZCBhdCBodHRwczovL2xldHNlbmNyeXB0Lm9yZy9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEABI7w4oX5Vo9A+UZlyVJPQX3FWoO536rJxNafQUmpkh/x/eiKEF4dMokY4JLek2XpeV+dIVGr8OTl6uOc11JW6nONI0xzAKcCunmiU94fnE5fSXyS4VWwO6T1aBF7brIoEG0An0l0NPoUjmTTeYTbcfxreOIPHsD7JaEY+DwbeHamTkdGgwjJHCiiALholinRQNwkcO6buDFsE0hhI8BJg9iig/NjE5WeNHCziaht+9WMI/lR82enTQWFBioiIkvXivWr8413mmdT38KlGD8bIYjnHgoa5lqO+RwBfaguIq+cEn7HJX9NEBHQhc6Qtg8iDVufhrJa1qG+7PyKhdjIUQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://termino.indigofloat.at/simplesaml/module.php/saml/sp/saml2-logout.php/pvp-test"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://termino.indigofloat.at/simplesaml/module.php/saml/sp/saml2-logout.php/pvp-test"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://termino.indigofloat.at/simplesaml/module.php/saml/sp/saml2-acs.php/pvp-test" index="0"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">Example organization</md:OrganizationName>
+    <md:OrganizationName xml:lang="de">Beispiel Organisation</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">Example organization</md:OrganizationDisplayName>
+    <md:OrganizationDisplayName xml:lang="de">Beispiel Organisation</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">http://example.com</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="support">
+    <md:Company>OSalliance</md:Company>
+    <md:GivenName>John</md:GivenName>
+    <md:SurName>Doe</md:SurName>
+    <md:EmailAddress>support@example.org</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>admin</md:GivenName>
+    <md:EmailAddress>xela@indigofloat.at</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" entityID="https://gitlab.test.portalverbund.gv.at/sp.xml">
+  <md:Extensions>
+    <mdattr:EntityAttributes>
+      <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+      <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+     </saml:Attribute>
+    </mdattr:EntityAttributes>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+      <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+      <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <mdui:UIInfo>
+        <mdui:DisplayName xml:lang="en">MA14 PVP2 gitlab Test</mdui:DisplayName>
+        <mdui:Description xml:lang="en"> 
+            PVP2 Testumgebung gitlab Service
+        </mdui:Description>
+        <mdui:Logo height="70" width="79" xml:lang="en">http://md.test.portalverbund.gv.at/pvpLogo.png</mdui:Logo>
+      </mdui:UIInfo>
+      <init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:KeyName>gitlab.test.portalverbund.gv.at</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIC6zCCAdOgAwIBAgIJAIkSELDiPK60MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDDgyZjdhODMwMmY0ODAeFw0xNjAyMjgxNjE1MjdaFw0yNjAyMjUxNjE1Mjda
+MBcxFTATBgNVBAMTDDgyZjdhODMwMmY0ODCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMOWMUhYcym8FSGzOedG9suMS+aK/culEXn04B84a/zlm9Dxv8wk
+ZXLT071OtQm6Rz9hdkC3e7AqkTeGnLzkpkzvgEjx/ManNoPFBnqfqgL9KE0t+FS2
+gRscy7VKDxdkMvzmXO+3+JjYYqnVVpbFUMFeOMaC74skFhKI8gc/j4a/8DH6TrPd
+SsyKi/k7QeRwP8QfnCapLbsGVTW4G+EuMcP6/Wl2zDcelpxh/dHv325yKCBbPvPC
++k/donPsw8OV4ItzehyOrtjWNCsQscgY+wWCidIMCPOkI3WRIGkeClJoz/dg8gSx
+HWkYacN6lze/xPYELR6WlzB9r2WOKjuHbRcCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+ODJmN2E4MzAyZjQ4MB0GA1UdDgQWBBQzGCch3EXA37qX6W3AtkE4KBzWSTANBgkq
+hkiG9w0BAQUFAAOCAQEAQP46xsyGllK/xk3Y7PCPkj28KrVwMsKeR8geRq8UswB2
+TQ+qhvWPZs5qUlNc1UGZat4nEu7T837ozJ7OeVNtgaLDLElfnerzss/ip/I0at5U
+g6g+/memzdipXb/5AF76353nK82dRmhO5M6EmVBdeAF1LGQkonmxBRRdMJ1OtGfq
+C9WdsDb3FQWX62QlBFuzf/sq1M/DSn9FHDlLHqtTyFFwGBqX6mlOa1u8e3cpCBpk
+o4WHxK0EHAKWMiSisR+VXm7BHqe6Qg6cnu9sipc3rkL3mXNvcWD4ktpkuxL9zEsd
+dMe4TwGTdA/GjVIW3ia5ouIVVuEaXrw8MlhsUoiIZQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/SLO/Redirect"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>    
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>    
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST-SimpleSign" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://gitlab.test.portalverbund.gv.at/Shibboleth.sso/SAML2/ECP" index="2"/>
+   </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">Stadt Wien MA14</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">MA14</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">http://www.portalverbund.at</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>  
+ </md:EntityDescriptor><md:EntityDescriptor xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ns2="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" entityID="https://proxy1.test.portalverbund.gv.at/idp">
+   <md:Extensions>
+        <ns2:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy1.test.portalverbund.gv.at/Saml2/disco" index="1"/>
+        <mdattr:EntityAttributes>
+          <saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+          <saml:AttributeValue>http://www.ref.gv.at/ns/names/agiz/pvp/egovtoken</saml:AttributeValue>
+         </saml:Attribute>
+        </mdattr:EntityAttributes>
+   </md:Extensions>
+   <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+          <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+          <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+          <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+          <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+          <mdui:UIInfo>
+            <mdui:DisplayName xml:lang="en">Rocket.chat (test/dev)</mdui:DisplayName>
+            <mdui:Description xml:lang="en"> 
+                Testeinbindung rocketchat.test.portalverbund.gv.at
+            </mdui:Description>
+            <mdui:Logo height="150" width="50" xml:lang="en">https://fairchat.net/rcstatic/img/rot-weiss-rot-logo300x100px.png</mdui:Logo>
+          </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        MIIDOjCCAiICCQCA7CMd5yagkzANBgkqhkiG9w0BAQsFADBfMQswCQYDVQQGEwJB
+                        VDENMAsGA1UECBMEV2llbjENMAsGA1UEBxMEV2llbjEMMAoGA1UEChMDQktBMQsw
+                        CQYDVQQLEwJJVDEXMBUGA1UEAxMOc2F0b3NhLWJhY2tlbmQwHhcNMTcwNzI4MTA1
+                        ODM5WhcNMjcwNzI2MTA1ODM5WjBfMQswCQYDVQQGEwJBVDENMAsGA1UECBMEV2ll
+                        bjENMAsGA1UEBxMEV2llbjEMMAoGA1UEChMDQktBMQswCQYDVQQLEwJJVDEXMBUG
+                        A1UEAxMOc2F0b3NhLWJhY2tlbmQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+                        AoIBAQCuP8FPbJebK5h6vI1Tf2CU4uD4NLn4az71hvrZCaukDEgCCgqQcqGpRTCC
+                        8aZ8qXx5NNXvrx3g88j9PDAwwC+dDvIQT7MwI/XH0XZL4KgyfU74NkC/U4SDYgoj
+                        SAqZ1VBFIkXP6bVFXKnIhVmGmRzB2WqZ/s1E9/gGFNEVKxb94pQWAutigruUBntM
+                        xLEpa4+Yl0Ja3zmhFgsHmn5rfeq5MGwk/bpqsHQwx1C20bJ4HVVZe7iV1JtJ+rZL
+                        GTdV8zLELdooRrxQG/Aj+YPYiyOFUMuLVa4S2BL3rztydnOi9qEE+O2c8SNTMP7W
+                        L27voF4M3Y6xuWy79voBNKQTzspjAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAKQH
+                        F8e8lZovZFOxNF6s4//OzqNJblMOXFfbz5/4DkPCimic78ltmZE1c6/BJOsjWSQq
+                        XHZd06tb2Y0Ljdu6HnMWOVk/3LmeozHrxTJ48PQvSCg1NmvDYvR1sM9WsJzMUaAA
+                        7kAt6kgecTs5r+GSwNcnj17lskRm7JRkx6nD/PmAXghFydwsK/LK87IeroT/9tL1
+                        I0aQm3MjwGvsEVpPP+bt5BdFa/RhMCS+6g1Aqw4442G5I5fUBzsw4jF5uf3n9kHy
+                        SVS38v8rJ73DL3wSX/GodKEeSpEk0kSAArbOj8tEEgJvEEUEQuORi/A6FIUob660
+                        fyMjUX7pdhYHsCkf8Ik=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy1.test.portalverbund.gv.at/Saml2/acs/post" index="1"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://proxy1.test.portalverbund.gv.at/Saml2/acs/redirect" index="2"/>
+   </md:SPSSODescriptor>
+   <md:Organization>
+       <md:OrganizationName xml:lang="de">osAlliance</md:OrganizationName>
+       <md:OrganizationDisplayName xml:lang="de">osAlliance</md:OrganizationDisplayName>
+       <md:OrganizationURL xml:lang="de">https://www.osalliance.com/</md:OrganizationURL>
+   </md:Organization>
+   <md:ContactPerson contactType="technical">
+       <md:GivenName>Rainer</md:GivenName>
+       <md:SurName>Hoerbe</md:SurName>
+       <md:EmailAddress>rh_testfed_pv_at@mail.hoerbe.at</md:EmailAddress>
+   </md:ContactPerson>
+</md:EntityDescriptor></md:EntitiesDescriptor>

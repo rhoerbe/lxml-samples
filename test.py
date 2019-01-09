@@ -147,3 +147,10 @@ o62=io.BytesIO()
 t62.write(o62)
 o62.getvalue()
 
+
+
+t = etree.parse(open('md_wpvTestAt.xml', mode='rb'))
+t.getroot().attrib['validUntil']
+
+t = etree.parse(open('md_wpvAt.xml', mode='rb'))
+t.getroot().attrib['validUntil']
