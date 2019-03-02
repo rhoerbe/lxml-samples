@@ -154,3 +154,12 @@ t.getroot().attrib['validUntil']
 
 t = etree.parse(open('md_wpvAt.xml', mode='rb'))
 t.getroot().attrib['validUntil']
+
+print('7.1 Parse string into ElementTree and find elements/attributes (pvzd namespace')
+with open('seclay_err.xml', encoding='utf8') as fd:
+    xml_str = fd.read()
+e71 = lxml.etree.fromstring(xml_str.encode('utf-8'))
+t71 = e71.getroottree()
+assert t71.find('//sl:ErrorCode', namespaces={'sl': 'http://www.buergerkarte.at/namespaces/securitylayer/1.2#'}).text=='2000'
+assert t71.find('//sl:Info', namespaces={'sl': 'http://www.buergerkarte.at/namespaces/securitylayer/1.2#'}).text=='Unklassifizierter Fehler in der Transportbindung.'
+

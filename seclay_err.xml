@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<?xml-stylesheet type="text/css" href="errorresponse.css"?>
+<sl:ErrorResponse xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:sl="http://www.buergerkarte.at/namespaces/securitylayer/1.2#">
+    <sl:ErrorCode>2000</sl:ErrorCode>
+    <sl:Info>Unklassifizierter Fehler in der Transportbindung.</sl:Info>
+</sl:ErrorResponse>
