@@ -1,4 +1,5 @@
 import io
+from pathlib import Path
 import lxml.etree
 
 XMLNS_DSIG = 'http://www.w3.org/2000/09/xmldsig#'
@@ -162,4 +163,13 @@ e71 = lxml.etree.fromstring(xml_str.encode('utf-8'))
 t71 = e71.getroottree()
 assert t71.find('//sl:ErrorCode', namespaces={'sl': 'http://www.buergerkarte.at/namespaces/securitylayer/1.2#'}).text=='2000'
 assert t71.find('//sl:Info', namespaces={'sl': 'http://www.buergerkarte.at/namespaces/securitylayer/1.2#'}).text=='Unklassifizierter Fehler in der Transportbindung.'
+
+print('XSLT transformation: delete signature and validUntil from EntityDescriptor')
+xml81_path = str(Path('81_signed_validuntil.xml'))
+xsl81_path = str(Path('81_tidy_samled.xslt'))
+dom = lxml.etree.parse(xml81_path)
+xslt = lxml.etree.parse(xsl81_path)
+transform = lxml.etree.XSLT(xslt)
+newdom = transform(dom)
+print(lxml.etree.tostring(newdom, pretty_print=True))
 
