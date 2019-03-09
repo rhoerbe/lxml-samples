@@ -22,6 +22,7 @@ print('1. Examples without namespace')
 
 print('1.1 Parse file into ElementTree and find elements')
 t11 = lxml.etree.parse('ed1_without_ns.xml')
+assert type(t11) == lxml.etree._ElementTree
 t11.xpath('//X509Certificate')
 t11.getroot()
 t11.find('IDPSSODescriptor')
@@ -80,13 +81,21 @@ t41 = lxml.etree.parse('ed4_utf16_encoding.xml')
 assert t41.xpath('//OrganizationName')[0].text == 'ÜDÖLLÄ Ltd'
 assert t41.xpath('//OrganizationDisplayName')[0].text == 'Many Umlauts: äöü'
 
-#print('4.2 UTF-16 using etree.fromstring()')
-# The following example is wrong, because the encoding is defined in the file, and should not be assumed by open():
-#with open('ed4_utf16_encoding.xml', encoding='utf-16') as fd:
-#    xml_str = fd.read()
-# use etree.parse() instead
-# to convert to utf-8:
-# lxml.etree.tostring(self.tree, encoding='utf-8', pretty_print=True)
+print('4.2 UTF-16 using etree.fromstring()')
+# It is important not to open XML-files as str, because the encoding is/may be in the document
+with open('ed2_with_ns.xml', 'rb') as fd:
+    xml_bytes = fd.read()
+e41 = lxml.etree.fromstring(xml_bytes)
+t41 = e41.getroottree()
+
+print('4.3 Convert UTF-16 to URF-8')
+with open('ed4_utf16_encoding.xml', 'rb') as fd:
+    xml_bytes = fd.read()
+e42 = lxml.etree.fromstring(xml_bytes)
+with open('testout/ed4_utf8_encoding.xml', 'wb') as fd:
+    fd.write(lxml.etree.tostring(e42, encoding='UTF-8', xml_declaration=True, pretty_print=True))
+
+
 
 print('5 C14N')
 o51 = io.BytesIO()
